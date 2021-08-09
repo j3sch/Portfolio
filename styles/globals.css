@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	@apply dark:bg-gray-900 bg-white text-gray-800  dark:text-gray-200 antialiased font-sans;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.container {
+	height: calc(100vh - 64px);
+}
