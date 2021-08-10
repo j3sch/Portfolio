@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	@apply dark:bg-gray-900 bg-white text-gray-800  dark:text-gray-200 antialiased font-sans;
+	@apply bg-white text-black antialiased font-mono;
 }
 
 html {
@@ -13,3 +13,8 @@ html {
 .container {
 	height: calc(100vh - 64px);
 }
+
+h1 {
+	@apply text-7xl font-semibold px-24 pt-24 pb-12 font-mono leading-tight;
+}
+

@@ -18,6 +18,6 @@
 		},
 		"jsx": "preserve"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Icon.js"],
 	"exclude": ["node_modules"]
 }

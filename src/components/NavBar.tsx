@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
@@ -35,15 +35,27 @@ const scrollToTop = (e: any) => {
 
 export default function NavBar(): JSX.Element {
 	const [current, setCurrent] = useState('Hi');
+	const [shadowActive, setShadowActiv] = useState('')
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+	});
+
+	function handleScroll() {
+		if (window.pageYOffset > 0) {
+			setShadowActiv('shadow');
+		} else {
+			setShadowActiv('')
+		}
+	}
 
 	return (
-		<Disclosure as="nav" className="sticky top-0">
+		<Disclosure as="nav" className={`scroll sticky top-0 z-10 scroll ${shadowActive}`}>
 			{({ open }) => (
 				<>
-					<div className="px-3 sm:px-6 lg:px-8 bg-gray-900">
+					<div className="px-3 sm:px-6 lg:px-8 bg-white">
 						<div className="relative flex items-center justify-between h-16">
 							<div
-								className="flex-shrink-0 flex items-center text-2xl font-semibold"
+								className="flex-shrink-0 text-black flex items-center text-2xl font-semibold"
 								onClick={scrollToTop}
 							>
 								Jens Schlegel
@@ -72,8 +84,8 @@ export default function NavBar(): JSX.Element {
 												href={item.href}
 												className={classNames(
 													item.name === current
-														? 'bg-gray-900 text-white'
-														: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+														? 'text-blaack font-bold'
+														: 'text-gray-500 hover:bg-gray-600 hover:text-white',
 													'px-3 py-2 rounded-md text-base font-medium',
 												)}
 												aria-current={current ? 'page' : undefined}
@@ -85,7 +97,7 @@ export default function NavBar(): JSX.Element {
 								</div>
 							</div>
 							<div className="absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:flex hidden">
-								<button className="bg-gray-300 p-0.5 rounded-full w-7 h-7 text-gray-400 items-center justify-center flex hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+								<button className="bg-white p-0.5 rounded-full w-7 h-7 items-center justify-center flex hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
 									<span className="sr-only">Github Profil</span>
 									<svg
 										width="1024"
