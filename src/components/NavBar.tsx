@@ -35,7 +35,7 @@ const scrollToTop = (e: any) => {
 
 export default function NavBar(): JSX.Element {
 	const [current, setCurrent] = useState('Hi');
-	const [shadowActive, setShadowActiv] = useState('')
+	const [shadowActive, setShadowActiv] = useState('');
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
 	});
@@ -44,12 +44,27 @@ export default function NavBar(): JSX.Element {
 		if (window.pageYOffset > 0) {
 			setShadowActiv('shadow');
 		} else {
-			setShadowActiv('')
+			setShadowActiv('');
+		}
+
+		if (window.pageYOffset > 4243) {
+			setCurrent('Kontaktiere mich');
+		} else if (window.pageYOffset >= 3544) {
+			setCurrent('Projekte');
+		} else if (window.pageYOffset >= 2400) {
+			setCurrent('Skills');
+		} else if (window.pageYOffset >= 700) {
+			setCurrent('Über mich');
+		} else if (window.pageYOffset > 0) {
+			setCurrent('Hi');
 		}
 	}
 
 	return (
-		<Disclosure as="nav" className={`scroll sticky top-0 z-10 scroll ${shadowActive}`}>
+		<Disclosure
+			as="nav"
+			className={`scroll sticky top-0 z-10 scroll ${shadowActive}`}
+		>
 			{({ open }) => (
 				<>
 					<div className="px-3 sm:px-6 lg:px-8 bg-white">
