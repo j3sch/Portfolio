@@ -7,11 +7,11 @@ export default [
 	{
 		Icon: 'CodeIcon',
 		title: 'Full-Stack Development',
-		skills: ['/react.png', '/nextjs.png', '/typescript.png', '/spring.png'],
+		skills: ['/react.png', '/nextjs.png', '/typescript.png', '/spring.png', '/tailwindcss.png'],
 	},
 	{
 		Icon: 'TemplateIcon',
-		title: 'Ui/UX',
-		skills: [],
+		title: 'Ui/Ux',
+		skills: ['/figma.svg', '/adobeXd.png', '/affinityPhoto.jpg', '/affinityDesigner.png'],
 	},
 ];

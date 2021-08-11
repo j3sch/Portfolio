@@ -4,10 +4,10 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 const navigation = [
 	{ name: 'Hi', href: '#welcome' },
-	{ name: 'About me', href: '#aboutMe' },
+	{ name: 'Über mich', href: '#aboutMe' },
 	{ name: 'Skills', href: '#skills' },
-	{ name: 'Projects', href: '#projects' },
-	{ name: 'Contact me', href: '#contactMe' },
+	{ name: 'Projekte', href: '#projects' },
+	{ name: 'Kontaktiere mich', href: '#contactMe' },
 ];
 
 function classNames(...classes: string[]) {
