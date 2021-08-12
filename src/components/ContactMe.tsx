@@ -6,7 +6,6 @@ export default function ContactMe() {
 			<h1>Kontaktiere mich</h1>
 			<div className="flex flex-col items-center h-1/2 justify-evenly text-4xl">
 				<CopyToClipboard name="jens.schlegel@protonmail.com" />
-				<CopyToClipboard name="https://www.linkedin.com/in/jens-s-15368116b" />
 			</div>
 		</div>
 	);

@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
 import { DuplicateIcon } from '@heroicons/react/outline';
-
 interface props {
 	btnName: string;
 	copyText: string;
