@@ -90,23 +90,23 @@ export default function NavBar(): JSX.Element {
 								<div className="hidden sm:block sm:ml-6">
 									<div className="flex space-x-4 text-center items-center">
 										{navigation.map((item) => (
-											<a
-												onClick={(e) => {
-													handleClick(e);
-													setCurrent(item.name);
-												}}
-												key={item.name}
-												href={item.href}
-												className={classNames(
-													item.name === current
-														? 'text-blaack font-bold'
-														: 'text-gray-500 hover:bg-gray-600 hover:text-white',
-													'px-3 py-2 rounded-md text-base font-medium',
-												)}
-												aria-current={current ? 'page' : undefined}
-											>
-												{item.name}
-											</a>
+												<a
+													onClick={(e) => {
+														handleClick(e);
+														setCurrent(item.name);
+													}}
+													key={item.name}
+													href={item.href}
+													className={classNames(
+														item.name === current
+															? 'text-black font-bold border-b-2 border-black p-1'
+															: 'text-gray-500 hover:bg-gray-600 hover:text-white font-medium rounded-md px-3 py-2',
+														'text-base ',
+													)}
+													aria-current={current ? 'page' : undefined}
+												>
+													{item.name}
+												</a>
 										))}
 									</div>
 								</div>
