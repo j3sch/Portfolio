@@ -12,7 +12,7 @@ export default function Skills() {
 							image={item.image}
 							title={item.title}
 							description={item.description}
-							github={item.github}
+							github={item.github && ''}
 							website={item.website}
 						/>
 					);

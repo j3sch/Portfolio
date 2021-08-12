@@ -3,7 +3,7 @@ interface Props {
 	image: string;
 	title: string;
 	description: string;
-	github: string;
+	github?: string;
 	website: string;
 }
 import Image from 'next/image';
@@ -28,7 +28,9 @@ export default function CardProjects(props: Props) {
 				<div className="group-hover:inline hidden">
 					<Fade duration={500}>
 						<OpenProjectLinkBtn name="Webseite" url={website} />
-						<OpenProjectLinkBtn name="Github" url={github} />
+						{github !== '' || github !== undefined &&
+							<OpenProjectLinkBtn name="Github" url={github} />
+						}
 					</Fade>
 				</div>
 				<div className="px-12  py-6 flex items-start flex-col  space-y-3 group-hover:hidden">

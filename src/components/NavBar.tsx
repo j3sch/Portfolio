@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import Link from 'next/link';
 
 const navigation = [
-	{ name: 'Hi', href: '#welcome' },
+	{ name: 'Hey', href: '#welcome' },
 	{ name: 'Über mich', href: '#aboutMe' },
 	{ name: 'Skills', href: '#skills' },
 	{ name: 'Projekte', href: '#projects' },
@@ -20,7 +21,7 @@ const handleClick = (e: any) => {
 	const location = document.querySelector(target).offsetTop;
 	window.scrollTo({
 		left: 0,
-		top: location - 64,
+		top: location,
 	});
 };
 
@@ -34,7 +35,7 @@ const scrollToTop = (e: any) => {
 };
 
 export default function NavBar(): JSX.Element {
-	const [current, setCurrent] = useState('Hi');
+	const [current, setCurrent] = useState('Hey');
 	const [shadowActive, setShadowActiv] = useState('');
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
@@ -57,7 +58,7 @@ export default function NavBar(): JSX.Element {
 		} else if (window.pageYOffset >= pageHight) {
 			setCurrent('Über mich');
 		} else if (window.pageYOffset > 0) {
-			setCurrent('Hi');
+			setCurrent('Hey');
 		}
 	}
 
@@ -113,7 +114,8 @@ export default function NavBar(): JSX.Element {
 								</div>
 							</div>
 							<div className="absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:flex hidden">
-								<button className="bg-white p-0.5 rounded-full w-7 h-7 items-center justify-center flex hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+								<Link href="https://github.com/J3ns6">
+								<button className="bg-white p-0.5 rounded-full w-7 h-7 items-center justify-center flex focus:outline-none focus-visible:ring-2 focus:ring-offset-2 focus-visible:ring-offset-gray-800 focus-visible:ring-white">
 									<span className="sr-only">Github Profil</span>
 									<svg
 										width="1024"
@@ -129,6 +131,7 @@ export default function NavBar(): JSX.Element {
 										/>
 									</svg>
 								</button>
+							</Link>
 							</div>
 						</div>
 					</div>
