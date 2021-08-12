@@ -3,11 +3,10 @@ import ContactMe from '~/components/ContactMe';
 import Skills from '~/components/Skills';
 import Projects from '~/components/Projects';
 import Welcome from '~/components/Welcome';
-import NavBar from '~/components/NavBar';
 
 export default function Home(): JSX.Element {
 	return (
-		<main className="overflow-hidden ">
+		<main className="overflow-hidden">
 			<Welcome />
 			<AboutMe />
 			<Skills />

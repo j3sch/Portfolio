@@ -1,4 +1,4 @@
-import CopyToClipboard from '~/ui/CopyToClipboard';
+import CopyToClipboard from '~/ui/ContactFields';
 
 export default function ContactMe() {
 	return (

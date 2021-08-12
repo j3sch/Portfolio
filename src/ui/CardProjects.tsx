@@ -1,4 +1,4 @@
-import { Fade, Slide, Reveal, Hinge, Zoom, Bounce } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 interface Props {
 	image: string;
 	title: string;
@@ -7,7 +7,7 @@ interface Props {
 	website: string;
 }
 import Image from 'next/image';
-import LinkToPageBtn from './LinkToPageBtn';
+import OpenProjectLinkBtn from './OpenProjectLinkBtn';
 
 export default function CardProjects(props: Props) {
 	const { image, title, description, github, website } = props;
@@ -27,8 +27,8 @@ export default function CardProjects(props: Props) {
 				</div>
 				<div className="group-hover:inline hidden">
 					<Fade duration={500}>
-						<LinkToPageBtn name="Webseite" url={website} />
-						<LinkToPageBtn name="Github" url={github} />
+						<OpenProjectLinkBtn name="Webseite" url={website} />
+						<OpenProjectLinkBtn name="Github" url={github} />
 					</Fade>
 				</div>
 				<div className="px-12  py-6 flex items-start flex-col  space-y-3 group-hover:hidden">
