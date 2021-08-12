@@ -41,19 +41,20 @@ export default function NavBar(): JSX.Element {
 	});
 
 	function handleScroll() {
+		const pageHight = document.documentElement.clientHeight;
 		if (window.pageYOffset > 0) {
 			setShadowActiv('shadow');
 		} else {
 			setShadowActiv('');
 		}
 
-		if (window.pageYOffset > 4243) {
+		if (window.pageYOffset > pageHight * 5) {
 			setCurrent('Kontaktiere mich');
-		} else if (window.pageYOffset >= 3544) {
+		} else if (window.pageYOffset >= pageHight * 4) {
 			setCurrent('Projekte');
-		} else if (window.pageYOffset >= 2400) {
+		} else if (window.pageYOffset >= pageHight * 3) {
 			setCurrent('Skills');
-		} else if (window.pageYOffset >= 700) {
+		} else if (window.pageYOffset >= pageHight) {
 			setCurrent('Über mich');
 		} else if (window.pageYOffset > 0) {
 			setCurrent('Hi');

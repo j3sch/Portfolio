@@ -1,6 +1,6 @@
 import education from '~/data/education';
 import practica from '~/data/practica';
-import DataTable from '../ui/DataTable';
+import DataTable from '~/ui/DataTable';
 
 export default function AboutMe() {
 	return (
