@@ -24,7 +24,7 @@ export default function Welcome() {
 				<p className="w-[60%] text-5xl px-24 font-mono leading-tight">
 					Ich bin Softwareentwickler und studiere{' '}
 					<TextHighlight color={colors[1]}>"Mobile Medien"</TextHighlight> an
-					der {' '}
+					der{' '}
 					<TextHighlight color={colors[2]}>Hochschule der Medien</TextHighlight>{' '}
 					in <TextHighlight color={colors[3]}>Stuttgart.</TextHighlight>
 				</p>
