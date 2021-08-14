@@ -17,11 +17,11 @@ export default function Welcome() {
 	return (
 		<div className="w-screen container overflow-hidden" id="welcome">
 			<RoughNotationGroup show={true}>
-				<h1 className="w-[50%]">
-					Hey, ich bin{' '}
+				<h1 className="sm:w-[60%]">
+					Hey, ich bin <br />
 					<TextHighlight color={colors[0]}>Jens Schlegel</TextHighlight>
 				</h1>
-				<p className="w-[60%] text-5xl px-24 font-mono leading-tight">
+				<p className="sm:w-[61%] text-2xl md:text-4xl lg:text-5xl px-6 md:px-12 lg:px-24 font-mono leading-tight">
 					Ich bin Softwareentwickler und studiere{' '}
 					<TextHighlight color={colors[1]}>"Mobile Medien"</TextHighlight> an
 					der{' '}
