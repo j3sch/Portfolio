@@ -77,7 +77,7 @@ export default function NavBar(): JSX.Element {
 							>
 								Jens Schlegel
 							</div>
-							<div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+							<div className="absolute inset-y-0 right-0 flex items-center md:hidden">
 								{/* Mobile menu button*/}
 								<Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 									<span className="sr-only">Open main menu</span>
@@ -88,8 +88,8 @@ export default function NavBar(): JSX.Element {
 									)}
 								</Disclosure.Button>
 							</div>
-							<div className="flex-1 flex items-center sm:items-stretch max-w-4xl">
-								<div className="hidden sm:block sm:ml-6">
+							<div className="flex-1 flex items-center md:items-stretch max-w-4xl">
+								<div className="hidden md:block md:ml-6">
 									<div className="flex space-x-4 text-center items-center">
 										{navigation.map((item) => (
 												<a
@@ -113,7 +113,7 @@ export default function NavBar(): JSX.Element {
 									</div>
 								</div>
 							</div>
-							<div className="absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:flex hidden">
+							<div className="absolute inset-y-0 right-0 items-center pr-2 sm:static md:inset-auto md:ml-6 sm:pr-0 md:flex hidden">
 								<Link href="https://github.com/J3ns6">
 								<button className="bg-white p-0.5 rounded-full w-7 h-7 items-center justify-center flex focus:outline-none focus-visible:ring-2 focus:ring-offset-2 focus-visible:ring-offset-gray-800 focus-visible:ring-white">
 									<span className="sr-only">Github Profil</span>
@@ -136,7 +136,7 @@ export default function NavBar(): JSX.Element {
 						</div>
 					</div>
 
-					<Disclosure.Panel className="sm:hidden">
+					<Disclosure.Panel className="md:hidden">
 						<div className="px-2 pt-2 pb-3 space-y-1">
 							{navigation.map((item) => (
 								<a

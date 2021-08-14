@@ -23,18 +23,18 @@ export default function DataTable({
 						graduation?: string;
 					}) => {
 						return item.id === 1 ? (
-							<div className="flex items-center w-1/2  text-lg ">
-								<p className="text-black ml-20">{item.year}</p>
-								<div className="pl-20 py-3">
+							<div className="flex items-center px-6 md:w-1/2  text-lg ">
+								<p className="text-black pl-6 md:pl-20">{item.year}</p>
+								<div className="pl-6 md:pl-20 py-3">
 									<p>{item.name}</p>
 									<p>{item.address}</p>
 									<p>{item.graduation}</p>
 								</div>
 							</div>
 						) : (
-							<div className="flex border-t-2 items-center w-1/2  border-gray-500 text-lg border-opacity-30">
-								<p className="text-black ml-20">{item.year}</p>
-								<div className="pl-20 py-3">
+							<div className="flex border-t-2 items-center px-6 md:w-1/2  border-gray-500 text-lg border-opacity-30">
+								<p className="text-black pl-6 md:pl-20">{item.year}</p>
+								<div className="pl-6 md:pl-20 py-3">
 									<p>{item.name}</p>
 									<p>{item.address}</p>
 									<p>{item.graduation}</p>
