@@ -8,7 +8,7 @@ interface Props {
 	title: string
 	description: string
 	github?: string
-	website: string
+	website?: string
 }
 
 export default function CardProjects(props : Props) {
