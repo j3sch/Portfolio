@@ -21,11 +21,11 @@ export default function ContactFields({ name }: props) {
 	return (
 		<div>
 			{clicked === true ? (
-				<button className="bg-gray-400 bg-opacity-30 text-4xl rounded-lg w-[72rem] h-28 flex items-center text-center justify-center">
+				<button className="bg-gray-400 bg-opacity-30 text-4xl rounded-lg  w-[90%] xl:w-[72rem] h-28 flex items-center text-center justify-center">
 					<p className="px-6">Text kopiert</p>
 				</button>
 			) : (
-				<button className="bg-gray-100 group rounded-lg w-[72rem] h-28 flex items-center text-center relative justify-center pr-16">
+				<button className="bg-gray-100 group rounded-lg w-[90%] xl:w-[72rem] h-28 flex items-center text-center relative justify-center pr-16">
 					<p className="px-6 text-center self-center group-hover:hidden">
 						{name}
 					</p>
