@@ -1,15 +1,17 @@
 import { Fade } from 'react-awesome-reveal';
-interface Props {
-	image: string;
-	title: string;
-	description: string;
-	github?: string;
-	website: string;
-}
+
 import Image from 'next/image';
 import OpenProjectLinkBtn from './OpenProjectLinkBtn';
 
-export default function CardProjects(props: Props) {
+interface Props {
+	image: string
+	title: string
+	description: string
+	github?: string
+	website: string
+}
+
+export default function CardProjects(props : Props) {
 	const { image, title, description, github, website } = props;
 
 	return (
@@ -26,12 +28,16 @@ export default function CardProjects(props: Props) {
 					/>
 				</div>
 				<div className="group-hover:inline hidden">
-					<Fade duration={500}>
-						<OpenProjectLinkBtn name="Webseite" url={website} />
-						{github !== '' || github !== undefined &&
+					{website !== undefined &&
+						<Fade duration={500}>
+							<OpenProjectLinkBtn name="Webseite" url={website} />
+						</Fade>
+					}
+					{github !== undefined &&
+						<Fade duration={500}>
 							<OpenProjectLinkBtn name="Github" url={github} />
-						}
-					</Fade>
+						</Fade>
+					}
 				</div>
 				<div className="px-12  py-6 flex items-start flex-col  space-y-3 group-hover:hidden">
 					<p className="text-2xl">{title}</p>

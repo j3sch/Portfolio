@@ -18,6 +18,6 @@
 		},
 		"jsx": "preserve"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Icon.js"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Icon.js", "src/ui/CardProjects.tsx"],
 	"exclude": ["node_modules"]
 }

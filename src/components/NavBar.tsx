@@ -42,7 +42,7 @@ export default function NavBar(): JSX.Element {
 	});
 
 	function handleScroll() {
-		const pageHight = document.documentElement.clientHeight;
+		const pageHight = document.documentElement.clientHeight -10;
 		if (window.pageYOffset > 0) {
 			setShadowActiv('shadow');
 		} else {
