@@ -5,11 +5,11 @@ import DataTable from '~/ui/DataTable';
 export default function AboutMe() {
 	return (
 		<>
-			<div className="w-screen h-[120vh] sm:h-screen" id="aboutMe">
+			<div className="w-screen h-[200vh] sm:h-screen" id="aboutMe">
 				<h1>Schulbildung</h1>
 				<DataTable data={education} />
 			</div>
-			<div className="w-screen h-screen" id="aboutMe">
+			<div className="w-screen h-[150vh] sm:h-screen" id="aboutMe">
 				<h1>Praktikas</h1>
 				<DataTable data={practica} />
 			</div>
