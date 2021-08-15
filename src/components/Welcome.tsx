@@ -15,7 +15,10 @@ export default function Welcome() {
 	}, []);
 
 	return (
-		<div className="w-screen container overflow-hidden" id="welcome">
+		<div
+			className="w-screen container overflow-hidden p-6 md:p-12 lg:p-24"
+			id="welcome"
+		>
 			<RoughNotationGroup show={true}>
 				<h1 className="sm:w-[60%]">
 					Hey, ich bin <br />

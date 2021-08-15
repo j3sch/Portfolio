@@ -15,6 +15,6 @@ html {
 }
 
 h1 {
-	@apply text-4xl md:text-6xl lg:text-7xl font-semibold px-6 md:px-12 lg:px-24 pt-24 pb-12 font-mono leading-tight;
+	@apply text-4xl md:text-6xl lg:text-7xl font-semibold pb-12 font-mono leading-tight;
 }
 

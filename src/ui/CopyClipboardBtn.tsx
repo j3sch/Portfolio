@@ -6,7 +6,11 @@ interface props {
 	setClicked: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function CopyClipboardBtn({ btnName, copyText, setClicked }: props) {
+export default function CopyClipboardBtn({
+	btnName,
+	copyText,
+	setClicked,
+}: props) {
 	return (
 		<div className="p-2">
 			<button

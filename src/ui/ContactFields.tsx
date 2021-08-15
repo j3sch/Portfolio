@@ -25,7 +25,7 @@ export default function ContactFields({ name }: props) {
 					<p className="px-6">Text kopiert</p>
 				</button>
 			) : (
-				<button className="bg-gray-100 group rounded-lg w-[90%] xl:w-[72rem] h-28 flex items-center text-center relative justify-center pr-16">
+				<div className="bg-gray-100 group rounded-lg w-[90%] xl:w-[72rem] h-28 flex items-center text-center relative justify-center pr-16">
 					<p className="px-6 text-center self-center group-hover:hidden">
 						{name}
 					</p>
@@ -39,7 +39,7 @@ export default function ContactFields({ name }: props) {
 							/>
 						</Fade>
 					</div>
-				</button>
+				</div>
 			)}
 		</div>
 	);

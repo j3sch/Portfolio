@@ -4,14 +4,14 @@ import Image from 'next/image';
 import OpenProjectLinkBtn from './OpenProjectLinkBtn';
 
 interface Props {
-	image: string
-	title: string
-	description: string
-	github?: string
-	website?: string
+	image: string;
+	title: string;
+	description: string;
+	github?: string;
+	website?: string;
 }
 
-export default function CardProjects(props : Props) {
+export default function CardProjects(props: Props) {
 	const { image, title, description, github, website } = props;
 
 	return (
@@ -28,16 +28,16 @@ export default function CardProjects(props : Props) {
 					/>
 				</div>
 				<div className="group-hover:inline hidden">
-					{website !== undefined &&
+					{website !== undefined && (
 						<Fade duration={500}>
 							<OpenProjectLinkBtn name="Webseite" url={website} />
 						</Fade>
-					}
-					{github !== undefined &&
+					)}
+					{github !== undefined && (
 						<Fade duration={500}>
 							<OpenProjectLinkBtn name="Github" url={github} />
 						</Fade>
-					}
+					)}
 				</div>
 				<div className="px-12  py-6 flex items-start flex-col  space-y-3 group-hover:hidden">
 					<p className="text-2xl">{title}</p>
