@@ -55,7 +55,6 @@ export default function Projects() {
 		slide: {
 			padding: 2,
 			minHeight: 100,
-			color: '#fff',
 		},
 	};
 
@@ -74,7 +73,6 @@ export default function Projects() {
 				<SwipeableViews>
 					{projects.map((item) => {
 						return (
-							<div style={Object.assign({}, styles.slide)}>
 								<ProjectCard
 									image={item.image}
 									title={item.title}
@@ -82,7 +80,6 @@ export default function Projects() {
 									github={item.github}
 									website={item.website}
 								/>
-							</div>
 						);
 					})}
 				</SwipeableViews>
