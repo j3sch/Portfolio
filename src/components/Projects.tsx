@@ -3,9 +3,16 @@ import projects from '~/data/projects';
 import { useState, useEffect } from 'react';
 import { useWindowWidth } from '@react-hook/window-size';
 import CardNavigation from '~/ui/CardNavigation';
-import SwipeableViews from 'react-swipeable-views';
+import Slider from 'react-slick';
 
 export default function Projects() {
+	var settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	};
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [currentCards, setCurrentCards] = useState([
 		{
@@ -70,10 +77,10 @@ export default function Projects() {
 				currentCardIndex={currentCardIndex}
 				maxIndexCards={maxIndexCards}
 			>
-				<SwipeableViews>
+				<Slider {...settings}>
 					{projects.map((item) => {
 						return (
-							<div style={Object.assign({}, styles.slide)}>
+							<div>
 								<ProjectCard
 									image={item.image}
 									title={item.title}
@@ -84,7 +91,7 @@ export default function Projects() {
 							</div>
 						);
 					})}
-				</SwipeableViews>
+				</Slider>
 			</CardNavigation>
 		</div>
 	);
