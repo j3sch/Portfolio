@@ -57,25 +57,23 @@ export default function Projects() {
 		>
 			<h1>Projekte</h1>
 
-			<div className="flex flex-shrink justify-center items-center space-x-0 sm:space-x-9">
-				<CardNavigation
-					setCurrentCardIndex={setCurrentCardIndex}
-					currentCardIndex={currentCardIndex}
-					maxIndexCards={maxIndexCards}
-				>
-					{currentCards.map((item) => {
-						return (
-							<ProjectCard
-								image={item.image}
-								title={item.title}
-								description={item.description}
-								github={item.github}
-								website={item.website}
-							/>
-						);
-					})}
-				</CardNavigation>
-			</div>
+			<CardNavigation
+				setCurrentCardIndex={setCurrentCardIndex}
+				currentCardIndex={currentCardIndex}
+				maxIndexCards={maxIndexCards}
+			>
+				{currentCards.map((item) => {
+					return (
+						<ProjectCard
+							image={item.image}
+							title={item.title}
+							description={item.description}
+							github={item.github}
+							website={item.website}
+						/>
+					);
+				})}
+			</CardNavigation>
 		</div>
 	);
 }

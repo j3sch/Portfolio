@@ -24,7 +24,7 @@ export default function Welcome() {
 					Hey, ich bin <br />
 					<TextHighlight color={colors[0]}>Jens Schlegel</TextHighlight>
 				</h1>
-				<p className="sm:w-[60%] text-2xl md:text-4xl lg:text-5xl font-mono leading-snug">
+				<p className="sm:w-[60%] text-2xl md:text-4xl lg:text-5xl font-mono xl:leading-tight">
 					Ich bin Softwareentwickler und studiere{' '}
 					<TextHighlight color={colors[1]}>"Mobile Medien"</TextHighlight> an
 					der{' '}

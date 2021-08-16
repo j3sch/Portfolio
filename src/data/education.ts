@@ -2,7 +2,7 @@ export default [
 	{
 		id: 1,
 		year: '2007 - 2011',
-		name: 'Grundschule Erich-Kästner',
+		name: 'Grundschule Erich-Kästner-Schule',
 		address: 'Carl-Diem-Straße 108, 72760 Reutlingen',
 	},
 	{

@@ -39,7 +39,7 @@ export default function CardProjects(props: Props) {
 						</Fade>
 					)}
 				</div>
-				<div className="px-12  py-6 flex items-start flex-col  space-y-3 group-hover:hidden">
+				<div className="px-12 py-6 flex items-start flex-col  space-y-3 group-hover:hidden">
 					<p className="text-2xl">{title}</p>
 					<p>{description}</p>
 				</div>

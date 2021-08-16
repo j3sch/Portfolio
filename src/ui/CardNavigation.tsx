@@ -1,7 +1,6 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
 import { Dispatch, SetStateAction } from 'react';
-import { useWindowWidth } from '@react-hook/window-size';
-
+import { useState } from 'react';
 export default function CardNavigation({
 	children,
 	setCurrentCardIndex,
@@ -13,8 +12,33 @@ export default function CardNavigation({
 	currentCardIndex: number;
 	maxIndexCards: number;
 }) {
+	const [touchStart, setTouchStart] = useState(0);
+	const [touchEnd, setTouchEnd] = useState(0);
+
+	function handleTouchStart(e) {
+		setTouchStart(e.targetTouches[0].clientX);
+	}
+
+	function handleTouchMove(e) {
+		setTouchEnd(e.targetTouches[0].clientX);
+	}
+
+	function handleTouchEnd() {
+		if (touchStart - touchEnd > 150) {
+			// do your stuff here for left swipe
+			setCurrentCardIndex(currentCardIndex--);
+			setCurrentCardIndex(currentCardIndex--);
+		}
+
+		if (touchStart - touchEnd < -150) {
+			// do your stuff here for right swipe
+			setCurrentCardIndex(currentCardIndex++);
+			setCurrentCardIndex(currentCardIndex++);
+		}
+	}
+
 	return (
-		<>
+		<div className="items-center flex flex-shrink justify-center">
 			<button
 				className="hidden sm:flex"
 				onClick={() => {
@@ -24,9 +48,16 @@ export default function CardNavigation({
 					}
 				}}
 			>
-				<ChevronLeftIcon className="w-16 h-16" />
+				<ChevronLeftIcon className="w-16 h-16 mr-3" />
 			</button>
-			{children}
+			<div
+				className="flex space-x-0 sm:space-x-9"
+				onTouchStart={handleTouchStart}
+				onTouchMove={handleTouchMove}
+				onTouchEnd={handleTouchEnd}
+			>
+				{children}
+			</div>
 			<button
 				className="hidden sm:flex"
 				onClick={() => {
@@ -36,8 +67,8 @@ export default function CardNavigation({
 					}
 				}}
 			>
-				<ChevronRightIcon className="w-16 h-16" />
+				<ChevronRightIcon className="w-16 h-16 ml-3" />
 			</button>
-		</>
+		</div>
 	);
 }
