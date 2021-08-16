@@ -17,10 +17,3 @@ html {
 h1 {
 	@apply text-4xl md:text-6xl lg:text-7xl font-semibold pb-12 font-mono leading-tight;
 }
-
-
-/* the parent */
-.slick-list {
-	margin: 0 -27px;
-}
-/* the parent */
