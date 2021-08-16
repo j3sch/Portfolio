@@ -16,13 +16,25 @@ export default function CardNavigation({
 	const [touchEnd, setTouchEnd] = useState(0);
 
 	function handleTouchStart(e: any) {
-		e.preventDefault();
+		disableScroll();
 		setTouchStart(e.targetTouches[0].clientX);
 	}
 
 	function handleTouchMove(e: any) {
-		e.preventDefault();
+		disableScroll();
 		setTouchEnd(e.targetTouches[0].clientX);
+	}
+
+	function disableScroll() {
+		let x = window.scrollX;
+		let y = window.scrollY;
+		window.onscroll = function () {
+			window.scrollTo(x, y);
+		};
+	}
+
+	function enableScroll() {
+		window.onscroll = function () {};
 	}
 
 	function handleTouchEnd() {
