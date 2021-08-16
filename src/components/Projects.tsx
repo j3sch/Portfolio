@@ -2,17 +2,22 @@ import ProjectCard from '~/ui/ProjectCard';
 import projects from '~/data/projects';
 import { useState, useEffect } from 'react';
 import { useWindowWidth } from '@react-hook/window-size';
-import CardNavigation from '~/ui/CardNavigation';
 import Slider from 'react-slick';
 
+let width = 0;
+
 export default function Projects() {
+	width = useWindowWidth();
+
 	var settings = {
 		dots: true,
-		infinite: true,
+		infinite: false,
 		speed: 500,
-		slidesToShow: 1,
+		slidesToShow: getNumberOfCards(),
 		slidesToScroll: 1,
+		initialSlide: 0,
 	};
+
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [currentCards, setCurrentCards] = useState([
 		{
@@ -24,9 +29,6 @@ export default function Projects() {
 			website: 'https://monopoly-fro.vercel.app/',
 		},
 	]);
-	const width = useWindowWidth();
-
-	let maxIndexCards = projects.length - getNumberOfCards();
 
 	useEffect(() => {
 		displayedCards();
@@ -58,41 +60,27 @@ export default function Projects() {
 		}
 	}
 
-	const styles = {
-		slide: {
-			padding: 4,
-			minHeight: 100,
-		},
-	};
-
 	return (
 		<div
 			className="w-screen h-screen space-y-16 p-6 md:p-12 lg:p-24"
 			id="projects"
 		>
 			<h1>Projekte</h1>
-
-			<CardNavigation
-				setCurrentCardIndex={setCurrentCardIndex}
-				currentCardIndex={currentCardIndex}
-				maxIndexCards={maxIndexCards}
-			>
-				<Slider {...settings}>
-					{projects.map((item) => {
-						return (
-							<div>
-								<ProjectCard
-									image={item.image}
-									title={item.title}
-									description={item.description}
-									github={item.github}
-									website={item.website}
-								/>
-							</div>
-						);
-					})}
-				</Slider>
-			</CardNavigation>
+			<Slider {...settings}>
+				{projects.map((item) => {
+					return (
+						<div>
+							<ProjectCard
+								image={item.image}
+								title={item.title}
+								description={item.description}
+								github={item.github}
+								website={item.website}
+							/>
+						</div>
+					);
+				})}
+			</Slider>
 		</div>
 	);
 }

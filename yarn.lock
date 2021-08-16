@@ -4854,7 +4854,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.4, prop-types@npm:^15.6.0, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.5.4, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -5015,6 +5015,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-easy-swipe@npm:^0.0.21":
+  version: 0.0.21
+  resolution: "react-easy-swipe@npm:0.0.21"
+  dependencies:
+    prop-types: ^15.5.8
+  checksum: 225f12a9dd410db1c790220867ab1eb58e2ef0a2bdae8541330805fc5b9905e242ab307b019f9aaed76473849a753f363baff03fa8a77e7a1860d7b41dc83ec0
+  languageName: node
+  linkType: hard
+
 "react-event-listener@npm:^0.6.0":
   version: 0.6.6
   resolution: "react-event-listener@npm:0.6.6"
@@ -5055,6 +5064,17 @@ __metadata:
   version: 0.8.3
   resolution: "react-refresh@npm:0.8.3"
   checksum: 3cffe5a9cbac1c5d59bf74bf9fff43c987d87ef32098b9092ea94b6637377d86c08565b9374d9397f446b3fbcd95de986ec77220a16f979687cb39b7b89e2f91
+  languageName: node
+  linkType: hard
+
+"react-responsive-carousel@npm:^3.2.20":
+  version: 3.2.20
+  resolution: "react-responsive-carousel@npm:3.2.20"
+  dependencies:
+    classnames: ^2.2.5
+    prop-types: ^15.5.8
+    react-easy-swipe: ^0.0.21
+  checksum: bbc7de00b88936cb0aaf977479e9ebd28a94a90fbbc4f4c7c86324edc80bde2d80db0189097c319835e23edcb868a1e27b71a403e9d913e305a37db6616cc3f6
   languageName: node
   linkType: hard
 
@@ -5574,6 +5594,15 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"slick-carousel@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "slick-carousel@npm:1.8.1"
+  peerDependencies:
+    jquery: ">=1.8.0"
+  checksum: acaad391e4d8bc1c7fdb8d361faa1f1d60829b31d618b54bc38c0550a59b26de36537e0ab4bc0364176ec11d1a61d0cf11e99d8d5b1285d656673c9a1a719257
+  languageName: node
+  linkType: hard
+
 "smart-buffer@npm:^4.1.0":
   version: 4.2.0
   resolution: "smart-buffer@npm:4.2.0"
@@ -5726,10 +5755,12 @@ resolve@^2.0.0-next.3:
     react: ^17.0.2
     react-awesome-reveal: ^3.8.1
     react-dom: 17.0.2
+    react-responsive-carousel: ^3.2.20
     react-rough-notation: ^1.0.1
     react-slick: ^0.28.1
     react-swipeable: ^6.2.0
     react-swipeable-views: ^0.14.0
+    slick-carousel: ^1.8.1
     tailwindcss: ^2.2.7
     typescript: ^4.3.5
     typescript-eslint: ^0.0.1-alpha.0
