@@ -72,7 +72,7 @@ export default function Projects() {
 				maxIndexCards={maxIndexCards}
 			>
 				<SwipeableViews>
-					{currentCards.map((item) => {
+					{projects.map((item) => {
 						return (
 							<div style={Object.assign({}, styles.slide)}>
 								<ProjectCard
