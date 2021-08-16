@@ -51,6 +51,14 @@ export default function Projects() {
 		}
 	}
 
+	const styles = {
+		slide: {
+			padding: 2,
+			minHeight: 100,
+			color: '#fff',
+		},
+	};
+
 	return (
 		<div
 			className="w-screen h-screen space-y-16 p-6 md:p-12 lg:p-24"
@@ -66,13 +74,15 @@ export default function Projects() {
 				<SwipeableViews>
 					{currentCards.map((item) => {
 						return (
-							<ProjectCard
-								image={item.image}
-								title={item.title}
-								description={item.description}
-								github={item.github}
-								website={item.website}
-							/>
+							<div style={Object.assign({}, styles.slide)}>
+								<ProjectCard
+									image={item.image}
+									title={item.title}
+									description={item.description}
+									github={item.github}
+									website={item.website}
+								/>
+							</div>
 						);
 					})}
 				</SwipeableViews>
