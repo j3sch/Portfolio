@@ -24,16 +24,20 @@ export default function CardNavigation({
 	}
 
 	function handleTouchEnd() {
-		if (touchStart - touchEnd > 150) {
+		if (touchStart - touchEnd > 75) {
 			// do your stuff here for left swipe
-			setCurrentCardIndex(currentCardIndex--);
-			setCurrentCardIndex(currentCardIndex--);
+			if (currentCardIndex < maxIndexCards) {
+				setCurrentCardIndex(currentCardIndex++);
+				setCurrentCardIndex(currentCardIndex++);
+			}
 		}
 
-		if (touchStart - touchEnd < -150) {
+		if (touchStart - touchEnd < -75) {
 			// do your stuff here for right swipe
-			setCurrentCardIndex(currentCardIndex++);
-			setCurrentCardIndex(currentCardIndex++);
+			if (currentCardIndex > 0) {
+				setCurrentCardIndex(currentCardIndex--);
+				setCurrentCardIndex(currentCardIndex--);
+			}
 		}
 	}
 
