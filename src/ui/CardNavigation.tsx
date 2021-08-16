@@ -1,6 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
 import { Dispatch, SetStateAction } from 'react';
-import { useState } from 'react';
+import SwipeableViews from 'react-swipeable-views';
+
 export default function CardNavigation({
 	children,
 	setCurrentCardIndex,
@@ -12,49 +13,6 @@ export default function CardNavigation({
 	currentCardIndex: number;
 	maxIndexCards: number;
 }) {
-	const [touchStart, setTouchStart] = useState(0);
-	const [touchEnd, setTouchEnd] = useState(0);
-
-	function handleTouchStart(e: any) {
-		disableScroll();
-		setTouchStart(e.targetTouches[0].clientX);
-	}
-
-	function handleTouchMove(e: any) {
-		disableScroll();
-		setTouchEnd(e.targetTouches[0].clientX);
-	}
-
-	function disableScroll() {
-		let x = window.scrollX;
-		let y = window.scrollY;
-		window.onscroll = function () {
-			window.scrollTo(x, y);
-		};
-	}
-
-	function enableScroll() {
-		window.onscroll = function () {};
-	}
-
-	function handleTouchEnd() {
-		if (touchStart - touchEnd > 75) {
-			// do your stuff here for left swipe
-			if (currentCardIndex < maxIndexCards) {
-				setCurrentCardIndex(currentCardIndex++);
-				setCurrentCardIndex(currentCardIndex++);
-			}
-		}
-
-		if (touchStart - touchEnd < -75) {
-			// do your stuff here for right swipe
-			if (currentCardIndex > 0) {
-				setCurrentCardIndex(currentCardIndex--);
-				setCurrentCardIndex(currentCardIndex--);
-			}
-		}
-	}
-
 	return (
 		<div className="items-center flex flex-shrink justify-center">
 			<button
@@ -68,14 +26,11 @@ export default function CardNavigation({
 			>
 				<ChevronLeftIcon className="w-16 h-16 mr-3" />
 			</button>
-			<div
-				className="flex space-x-0 sm:space-x-9"
-				onTouchStart={(e) => handleTouchStart(e)}
-				onTouchMove={(e) => handleTouchMove(e)}
-				onTouchEnd={handleTouchEnd}
-			>
+			<SwipeableViews>
+			<div className="flex space-x-0 sm:space-x-9">
 				{children}
 			</div>
+			</SwipeableViews>
 			<button
 				className="hidden sm:flex"
 				onClick={() => {
