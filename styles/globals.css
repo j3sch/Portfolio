@@ -21,7 +21,3 @@ h1 {
 pagination: {
 	el: '.swiper-pagination';
 }
-
-/* .swiper-pagination {
-	bottom: -20px !important;
-} */
