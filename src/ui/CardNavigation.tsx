@@ -16,10 +16,12 @@ export default function CardNavigation({
 	const [touchEnd, setTouchEnd] = useState(0);
 
 	function handleTouchStart(e: any) {
+		e.preventDefault();
 		setTouchStart(e.targetTouches[0].clientX);
 	}
 
 	function handleTouchMove(e: any) {
+		e.preventDefault();
 		setTouchEnd(e.targetTouches[0].clientX);
 	}
 
