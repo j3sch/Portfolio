@@ -1453,6 +1453,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "clsx@npm:1.1.1"
+  checksum: ff052650329773b9b245177305fc4c4dc3129f7b2be84af4f58dc5defa99538c61d4207be7419405a5f8f3d92007c954f4daba5a7b74e563d5de71c28c830063
+  languageName: node
+  linkType: hard
+
 "code-point-at@npm:^1.0.0":
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0"
@@ -5524,6 +5531,7 @@ resolve@^2.0.0-next.3:
     "@typescript-eslint/eslint-plugin": ^4.29.1
     "@typescript-eslint/parser": ^4.29.1
     autoprefixer: ^10.3.1
+    clsx: ^1.1.1
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript-prettier: ^4.2.0

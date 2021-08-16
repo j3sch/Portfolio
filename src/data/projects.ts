@@ -29,7 +29,7 @@ export default [
 	},
 	{
 		image: '/climateChallenges.png',
-		title: 'Klima/Umwelt Herausforderungen App',
+		title: 'Klima/Umwelt Herausforderungen',
 		description:
 			'Schließe Herausforderungen ab, um deinen Fussabdruck zu verbessern.',
 		website:
