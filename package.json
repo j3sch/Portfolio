@@ -28,6 +28,7 @@
 		"react-swipeable": "^6.2.0",
 		"react-swipeable-views": "^0.14.0",
 		"slick-carousel": "^1.8.1",
+		"swiper": "^6.8.2",
 		"tailwindcss": "^2.2.7",
 		"typescript-eslint": "^0.0.1-alpha.0"
 	},

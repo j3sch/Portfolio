@@ -3,20 +3,13 @@ import projects from '~/data/projects';
 import { useState, useEffect } from 'react';
 import { useWindowWidth } from '@react-hook/window-size';
 import Slider from 'react-slick';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination } from 'swiper/core';
 let width = 0;
 
 export default function Projects() {
+	SwiperCore.use([Pagination]);
 	width = useWindowWidth();
-
-	var settings = {
-		dots: true,
-		infinite: false,
-		speed: 500,
-		slidesToShow: getNumberOfCards(),
-		slidesToScroll: 1,
-		initialSlide: 0,
-	};
 
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [currentCards, setCurrentCards] = useState([
@@ -49,7 +42,7 @@ export default function Projects() {
 	}
 
 	function getNumberOfCards() {
-		if (width <= 900) {
+		if (width <= 800) {
 			return 1;
 		} else if (width <= 1350) {
 			return 2;
@@ -66,10 +59,16 @@ export default function Projects() {
 			id="projects"
 		>
 			<h1>Projekte</h1>
-			<Slider {...settings}>
+			<Swiper
+				slidesPerView={getNumberOfCards()}
+				spaceBetween={-70}
+				pagination={{
+					clickable: true,
+				}} className="h-[28rem]"
+			>
 				{projects.map((item) => {
 					return (
-						<div>
+						<SwiperSlide>
 							<ProjectCard
 								image={item.image}
 								title={item.title}
@@ -77,10 +76,10 @@ export default function Projects() {
 								github={item.github}
 								website={item.website}
 							/>
-						</div>
+						</SwiperSlide>
 					);
 				})}
-			</Slider>
+			</Swiper>
 		</div>
 	);
 }

@@ -1953,6 +1953,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom7@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "dom7@npm:3.0.0"
+  dependencies:
+    ssr-window: ^3.0.0-alpha.1
+  checksum: 5a1b8979ed35afb9cc6714ff048ce4599a24fd8a11069bb52a61ccae1bdc0716c2bd6b07c4338856d5664d984c0bee9f6b7616a01ffa09daaebfe02fee016e66
+  languageName: node
+  linkType: hard
+
 "domain-browser@npm:4.19.0":
   version: 4.19.0
   resolution: "domain-browser@npm:4.19.0"
@@ -5702,6 +5711,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^3.0.0, ssr-window@npm:^3.0.0-alpha.1":
+  version: 3.0.0
+  resolution: "ssr-window@npm:3.0.0"
+  checksum: e619db7437874c89d2f4cea94ca8cbdfb4eed9f20d86fa193c29a17829c26d7ceefae344ac1699cc24ebb8d397fd0937a1043b5177a140c2504c9fda58bb5652
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^8.0.0, ssri@npm:^8.0.1":
   version: 8.0.1
   resolution: "ssri@npm:8.0.1"
@@ -5761,6 +5777,7 @@ resolve@^2.0.0-next.3:
     react-swipeable: ^6.2.0
     react-swipeable-views: ^0.14.0
     slick-carousel: ^1.8.1
+    swiper: ^6.8.2
     tailwindcss: ^2.2.7
     typescript: ^4.3.5
     typescript-eslint: ^0.0.1-alpha.0
@@ -6059,6 +6076,16 @@ resolve@^2.0.0-next.3:
   dependencies:
     has-flag: ^4.0.0
   checksum: c052193a7e43c6cdc741eb7f378df605636e01ad434badf7324f17fb60c69a880d8d8fcdcb562cf94c2350e57b937d7425ab5b8326c67c2adc48f7c87c1db406
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^6.8.2":
+  version: 6.8.2
+  resolution: "swiper@npm:6.8.2"
+  dependencies:
+    dom7: ^3.0.0
+    ssr-window: ^3.0.0
+  checksum: e12d3f99a4c12b641dc3443b6021d72a395271f89b7d13f6a3e2fcfee0e9301f3978824b6832d747b45fbbabcf74f7ae22724ca4861c6658af47514c0348fc74
   languageName: node
   linkType: hard
 
