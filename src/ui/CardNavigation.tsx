@@ -52,8 +52,8 @@ export default function CardNavigation({
 			</button>
 			<div
 				className="flex space-x-0 sm:space-x-9"
-				onTouchStart={handleTouchStart}
-				onTouchMove={handleTouchMove}
+				onTouchStart={(e) => handleTouchStart(e)}
+				onTouchMove={(e) => handleTouchMove(e)}
 				onTouchEnd={handleTouchEnd}
 			>
 				{children}
