@@ -3,6 +3,7 @@ import projects from '~/data/projects';
 import { useState, useEffect } from 'react';
 import { useWindowWidth } from '@react-hook/window-size';
 import CardNavigation from '~/ui/CardNavigation';
+import SwipeableViews from 'react-swipeable-views';
 
 export default function Projects() {
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -62,17 +63,19 @@ export default function Projects() {
 				currentCardIndex={currentCardIndex}
 				maxIndexCards={maxIndexCards}
 			>
-				{currentCards.map((item) => {
-					return (
-						<ProjectCard
-							image={item.image}
-							title={item.title}
-							description={item.description}
-							github={item.github}
-							website={item.website}
-						/>
-					);
-				})}
+				<SwipeableViews>
+					{currentCards.map((item) => {
+						return (
+							<ProjectCard
+								image={item.image}
+								title={item.title}
+								description={item.description}
+								github={item.github}
+								website={item.website}
+							/>
+						);
+					})}
+				</SwipeableViews>
 			</CardNavigation>
 		</div>
 	);

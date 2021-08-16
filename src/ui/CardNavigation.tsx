@@ -1,6 +1,5 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
 import { Dispatch, SetStateAction } from 'react';
-import SwipeableViews from 'react-swipeable-views';
 
 export default function CardNavigation({
 	children,
@@ -26,11 +25,9 @@ export default function CardNavigation({
 			>
 				<ChevronLeftIcon className="w-16 h-16 mr-3" />
 			</button>
-			<SwipeableViews>
 			<div className="flex space-x-0 sm:space-x-9">
 				{children}
 			</div>
-			</SwipeableViews>
 			<button
 				className="hidden sm:flex"
 				onClick={() => {
