@@ -64,7 +64,8 @@ export default function Projects() {
 				spaceBetween={-70}
 				pagination={{
 					clickable: true,
-				}} className="h-[28rem]"
+				}}
+				className="h-[28rem]"
 			>
 				{projects.map((item) => {
 					return (
