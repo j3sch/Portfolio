@@ -2,7 +2,6 @@ import ProjectCard from '~/ui/ProjectCard';
 import projects from '~/data/projects';
 import { useState, useEffect } from 'react';
 import { useWindowWidth } from '@react-hook/window-size';
-import Slider from 'react-slick';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
 let width = 0;
@@ -55,13 +54,13 @@ export default function Projects() {
 
 	return (
 		<div
-			className="w-screen h-screen space-y-16 p-6 md:p-12 lg:p-24"
+			className="w-screen h-screen space-y-16 p-6 md:p-12 lg:p-24 pr-0 md:pr-0 lg:pr-0"
 			id="projects"
 		>
 			<h1>Projekte</h1>
 			<Swiper
 				slidesPerView={getNumberOfCards()}
-				spaceBetween={-70}
+				spaceBetween={-20}
 				pagination={{
 					clickable: true,
 				}}
