@@ -1,14 +1,11 @@
 import ProjectCard from '~/ui/ProjectCard';
 import projects from '~/data/projects';
 import { useState, useEffect } from 'react';
-import { useWindowWidth } from '@react-hook/window-size';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
-let width = 0;
-
+import getNumberOfCards from '~/lib/getNumberOfCards';
 export default function Projects() {
 	SwiperCore.use([Pagination]);
-	width = useWindowWidth();
 
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 	const [currentCards, setCurrentCards] = useState([
@@ -22,15 +19,17 @@ export default function Projects() {
 		},
 	]);
 
+	let numberOfCards = getNumberOfCards();
+
 	useEffect(() => {
 		displayedCards();
-	}, [currentCardIndex, width]);
+	}, [currentCardIndex, numberOfCards]);
 
 	function displayedCards() {
 		let currentCardArray: any = [];
 		for (
 			let i = currentCardIndex;
-			i < currentCardIndex + getNumberOfCards();
+			i < currentCardIndex + numberOfCards;
 			i++
 		) {
 			if (projects.length > i) {
@@ -38,18 +37,6 @@ export default function Projects() {
 			}
 		}
 		setCurrentCards(currentCardArray);
-	}
-
-	function getNumberOfCards() {
-		if (width <= 800) {
-			return 1;
-		} else if (width <= 1350) {
-			return 2;
-		} else if (width <= 1636) {
-			return 3;
-		} else {
-			return 4;
-		}
 	}
 
 	return (
@@ -64,7 +51,7 @@ export default function Projects() {
 				pagination={{
 					clickable: true,
 				}}
-				className="h-[28rem]"
+				className="h-[27rem] sm:h-[28rem]"
 			>
 				{projects.map((item) => {
 					return (

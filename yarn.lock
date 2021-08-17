@@ -760,6 +760,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"D@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "D@npm:1.0.0"
+  checksum: c7aefb83af9b98a04b31b3708a32f5f332183face1b2a6d9eed28b64688d863ca269e04f8b352fba0a8b893ff2aa858c7709352f372f4dd90dfb474a37d2a78d
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -5750,6 +5757,7 @@ resolve@^2.0.0-next.3:
     "@types/react-swipeable-views": ^0.13.1
     "@typescript-eslint/eslint-plugin": ^4.29.1
     "@typescript-eslint/parser": ^4.29.1
+    D: ^1.0.0
     autoprefixer: ^10.3.1
     clsx: ^1.1.1
     eslint: ^7.32.0
