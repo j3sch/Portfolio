@@ -60,7 +60,7 @@ export default function Projects() {
 			<h1>Projekte</h1>
 			<Swiper
 				slidesPerView={getNumberOfCards()}
-				spaceBetween={-20}
+				spaceBetween={10}
 				pagination={{
 					clickable: true,
 				}}
