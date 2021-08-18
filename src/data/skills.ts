@@ -13,6 +13,7 @@ export default [
 			'/typescript.png',
 			'/spring.png',
 			'/tailwindcss.png',
+			'/mongoDb.png',
 		],
 	},
 	{

@@ -15,7 +15,7 @@ html {
 }
 
 h1 {
-	@apply text-4xl md:text-6xl lg:text-7xl font-semibold font-mono leading-tight;
+	@apply text-4xl md:text-6xl lg:text-7xl font-semibold font-mono leading-tight md:pb-6 lg:pb-12;
 }
 
 @media screen and (min-width: 1350px) {
