@@ -26,7 +26,7 @@ export default function ContactFields({ name }: props) {
 				</button>
 			) : (
 				<div className="bg-gray-100 group rounded-lg w-full xl:w-[67.5rem] xl:mr-8 h-20 md:h-28 flex items-center text-center relative justify-center">
-					<p className="text-center m-8 sm:m-12 md:m-14 self-center group-hover:hidden text-md sm:text-2xl md:text-3xl lg:text-4xl">
+					<p className="text-center m-6 sm:m-12 md:m-14 self-center group-hover:hidden text-md sm:text-2xl md:text-3xl lg:text-4xl">
 						{name}
 					</p>
 					<div className="group-hover:flex w-full hidden">
