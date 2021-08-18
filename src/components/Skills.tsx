@@ -17,7 +17,7 @@ export default function Skills() {
 			<Swiper
 				id="swiper-skills"
 				slidesPerView={getNumberOfCards()}
-				spaceBetween={0}
+				spaceBetween={15}
 				pagination={{
 					clickable: true,
 				}}
