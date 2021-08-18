@@ -12,7 +12,7 @@ export default function Card(props: Props) {
 
 	return (
 		<Fade>
-			<div className="bg-[#F2F3F5] w-80 h-96 rounded-xl flex items-start justify-center flex-col p-12  space-y-6">
+			<div className="bg-[#F2F3F5] w-72 sm:w-80 h-96 rounded-xl flex items-start justify-center flex-col p-12  space-y-6">
 				{Icon}
 				<p className="text-2xl">{title}</p>
 				<div className="flex">

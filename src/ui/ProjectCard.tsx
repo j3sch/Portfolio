@@ -14,7 +14,7 @@ export default function CardProjects(props: Props) {
 
 	return (
 		<Fade>
-			<div className="group bg-[#F2F3F5] w-80 h-96 rounded-xl p-0.5 relative">
+			<div className="group bg-[#F2F3F5] w-72 sm:w-80 h-96 rounded-xl p-0.5 relative">
 				<div className="relative w-full h-40 group-hover:hidden">
 					<Image
 						src={image}
