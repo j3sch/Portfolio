@@ -17,3 +17,20 @@ html {
 h1 {
 	@apply text-4xl md:text-6xl lg:text-7xl font-semibold font-mono leading-tight;
 }
+
+@media screen and (min-width: 1350px) {
+	#swiper-skills .swiper-wrapper {
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 1350px; max-width: 1636px) {
+	#swiper-projects .swiper-wrapper {
+		justify-content: center;
+	}
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+}

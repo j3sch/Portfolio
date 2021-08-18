@@ -4651,6 +4651,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"performance-now@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "performance-now@npm:2.1.0"
+  checksum: 534e641aa8f7cba160f0afec0599b6cecefbb516a2e837b512be0adbe6c1da5550e89c78059c7fabc5c9ffdf6627edabe23eb7c518c4500067a898fa65c2b550
+  languageName: node
+  linkType: hard
+
 "picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.2.3":
   version: 2.2.3
   resolution: "picomatch@npm:2.2.3"
@@ -4971,6 +4978,15 @@ __metadata:
   version: 5.1.1
   resolution: "quick-lru@npm:5.1.1"
   checksum: a516faa25574be7947969883e6068dbe4aa19e8ef8e8e0fd96cddd6d36485e9106d85c0041a27153286b0770b381328f4072aa40d3b18a19f5f7d2b78b94b5ed
+  languageName: node
+  linkType: hard
+
+"raf@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "raf@npm:3.4.1"
+  dependencies:
+    performance-now: ^2.1.0
+  checksum: 50ba284e481c8185dbcf45fc4618ba3aec580bb50c9121385d5698cb6012fe516d2015b1df6dd407a7b7c58d44be8086108236affbce1861edd6b44637c8cd52
   languageName: node
   linkType: hard
 
@@ -5399,6 +5415,19 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"rooks@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "rooks@npm:5.6.0"
+  dependencies:
+    lodash.debounce: ^4.0.8
+    raf: ^3.4.1
+  peerDependencies:
+    react: ^16.8.0  || ^17.0.0
+    react-dom: ^16.8.0  || ^17.0.0
+  checksum: b708be009f96053ad390327cdcd18af8cef558fbbddfa88f64887a40ec0c1eb22698265859b5bb3d5555583894a4fd2d85f61e0e7dbaeeec74d7e1aece555ee2
+  languageName: node
+  linkType: hard
+
 "rough-notation@npm:^0.4.0":
   version: 0.4.0
   resolution: "rough-notation@npm:0.4.0"
@@ -5784,6 +5813,7 @@ resolve@^2.0.0-next.3:
     react-slick: ^0.28.1
     react-swipeable: ^6.2.0
     react-swipeable-views: ^0.14.0
+    rooks: ^5.6.0
     slick-carousel: ^1.8.1
     swiper: ^6.8.2
     tailwindcss: ^2.2.7

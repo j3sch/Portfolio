@@ -28,11 +28,7 @@ export default function Projects() {
 
 	function displayedCards() {
 		let currentCardArray: any = [];
-		for (
-			let i = currentCardIndex;
-			i < currentCardIndex + numberOfCards;
-			i++
-		) {
+		for (let i = currentCardIndex; i < currentCardIndex + numberOfCards; i++) {
 			if (projects.length > i) {
 				currentCardArray.push(projects[i]);
 			}
@@ -42,13 +38,14 @@ export default function Projects() {
 
 	return (
 		<div
-			className="w-screen h-screen space-y-16 p-6 md:p-12 lg:p-24 pr-0 md:pr-0 lg:pr-0"
+			className="w-screen h-screen space-y-16 p-6 md:p-12 lg:p-24"
 			id="projects"
 		>
 			<h1>Projekte</h1>
 			<Swiper
+				id="swiper-projects"
 				slidesPerView={getNumberOfCards()}
-				spaceBetween={10}
+				spaceBetween={0}
 				pagination={{
 					clickable: true,
 				}}

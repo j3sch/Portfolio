@@ -42,8 +42,11 @@ export default function NavBar(): JSX.Element {
 		window.addEventListener('scroll', handleScroll);
 	});
 
+
+
 	function handleScroll() {
 		const pageHight = document.documentElement.clientHeight - 10;
+
 		if (window.pageYOffset > 0) {
 			setShadowActiv('shadow');
 		} else {
@@ -141,10 +144,8 @@ export default function NavBar(): JSX.Element {
 						{navigation.map((item) => (
 							<a
 								onClick={(e) => {
-									console.log(isOpen);
 									handleClick(e);
 									setCurrent(item.name);
-									setIsOpen(false);
 								}}
 								key={item.name}
 								href={item.href}
