@@ -3,7 +3,7 @@ import skills from '~/data/skills';
 import selectIcon from '~/lib/selectIcon';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
-import getNumberOfCards from '~/lib/getNumberOfCards';
+import { getNumberOfCards } from '~/lib/getNumberOfCards';
 
 export default function Skills() {
 	SwiperCore.use([Pagination]);
