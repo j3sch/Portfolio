@@ -14,7 +14,7 @@ export default function CardProjects(props: Props) {
 
 	return (
 		<Fade>
-			<div className="group bg-[#F2F3F5] w-80 h-96 rounded-lg p-0.5 relative">
+			<div className="group bg-[#F2F3F5] w-80 h-96 rounded-xl p-0.5 relative">
 				<div className="relative w-full h-40 group-hover:hidden">
 					<Image
 						src={image}
@@ -22,7 +22,7 @@ export default function CardProjects(props: Props) {
 						layout={'fill'}
 						objectFit={'cover'}
 						priority
-						className="rounded-t-lg"
+						className="rounded-t-xl"
 					/>
 				</div>
 				<div className="group-hover:inline hidden">
@@ -33,7 +33,7 @@ export default function CardProjects(props: Props) {
 						<OpenProjectLinkBtn name="Github" url={github} />
 					)}
 				</div>
-				<div className="px-12 py-6 flex items-start flex-col  space-y-3 group-hover:hidden">
+				<div className="px-6 py-4 flex items-start flex-col  space-y-3 group-hover:hidden">
 					<p className="text-2xl">{title}</p>
 					<p>{description}</p>
 				</div>
