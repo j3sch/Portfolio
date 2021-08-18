@@ -25,7 +25,7 @@ export default function ContactFields({ name }: props) {
 					<p className="px-6">Text kopiert</p>
 				</button>
 			) : (
-				<div className="bg-gray-100 group rounded-lg w-full xl:w-[67.5rem] xl:mr-8 h-28 flex items-center text-center relative justify-center">
+				<div className="bg-gray-100 group rounded-lg w-full xl:w-[67.5rem] xl:mr-8 h-20 md:h-28 flex items-center text-center relative justify-center">
 					<p className="text-center m-8 sm:m-12 md:m-14 self-center group-hover:hidden text-md sm:text-2xl md:text-3xl lg:text-4xl">
 						{name}
 					</p>
