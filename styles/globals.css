@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	@apply bg-white text-black antialiased font-mono;
+	@apply bg-white text-black antialiased font-sans;
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 }
 
 h1 {
-	@apply text-4xl md:text-6xl lg:text-7xl font-semibold font-mono leading-tight md:pb-6 lg:pb-12;
+	@apply text-4xl md:text-6xl lg:text-7xl font-sans font-semibold leading-tight md:pb-6 lg:pb-12;
 }
 
 @media screen and (min-width: 1350px) {

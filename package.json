@@ -13,6 +13,7 @@
 		"@headlessui/react": "^1.4.0",
 		"@heroicons/react": "^1.0.3",
 		"@react-hook/window-size": "^3.0.7",
+		"@tailwindcss/typography": "^0.4.1",
 		"@types/react-slick": "^0.23.5",
 		"@types/react-swipeable-views": "^0.13.1",
 		"D": "^1.0.0",
