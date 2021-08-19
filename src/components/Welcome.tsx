@@ -16,9 +16,9 @@ export default function Welcome() {
 	}, []);
 
 	return (
-		<div className="flex container w-screen flex-col md:flex-row">
+		<div className="flex container w-screen flex-col md:flex-row space-y-10 xl:space-y-0 lg:space-y-20">
 			<div
-				className="space-y-12 overflow-hidden p-6 md:p-12 lg:p-24"
+				className="space-y-12 flex w-full flex-col text-center md:text-left overflow-hidden p-6 md:p-12 lg:p-24"
 				id="welcome"
 			>
 				<RoughNotationGroup show={true}>
@@ -26,7 +26,7 @@ export default function Welcome() {
 						Hey, ich bin <br />
 						<TextHighlight color={colors[0]}>Jens Schlegel</TextHighlight>
 					</h1>
-					<p className="w-full text-2xl font-sans md:text-4xl lg:text-5xl xl:leading-tight">
+					<p className="w-full md:w-[60%] lg:w-[55%] xl:w-[55%] 2xl:w-[50%] text-2xl font-sans md:text-3xl lg:text-4xl xl:text-5xl xl:leading-tight">
 						Ich bin Softwareentwickler und studiere{' '}
 						<TextHighlight color={colors[1]}>"Mobile Medien"</TextHighlight> an
 						der{' '}
@@ -37,12 +37,12 @@ export default function Welcome() {
 					</p>
 				</RoughNotationGroup>
 			</div>
-			<div className="flex w-96 md:w-full justify-start md:justify-end md:self-end">
+			<div className="flex w-72 sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-full relative md:absolute md:right-12 xl:right-20 2xl:right-32 justify-end self-center md:self-start xl:self-center">
 				<Image
 					src="/19.08.21 komp with shape.png"
 					alt="Bild vom Projekt"
-					width={600}
-					height={740}
+					width={550}
+					height={678}
 					priority
 				/>
 			</div>

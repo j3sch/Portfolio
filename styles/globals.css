@@ -11,11 +11,12 @@ html {
 }
 
 .container {
-	height: calc(100vh - 64px);
+	min-height: calc(100vh - 64px);
+	height: auto;
 }
 
 h1 {
-	@apply text-4xl md:text-6xl lg:text-7xl font-sans font-semibold leading-tight md:pb-6 lg:pb-12;
+	@apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold leading-tight md:pb-6 lg:pb-12;
 }
 
 @media screen and (min-width: 1350px) {
