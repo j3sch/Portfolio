@@ -82,7 +82,7 @@ export default function NavBar(): JSX.Element {
 						</div>
 						<div className="absolute inset-y-0 right-0 flex items-center md:hidden">
 							{/* Mobile menu button*/}
-							<Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+							<Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-black focus:text-white focus:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 								<span className="sr-only">Open main menu</span>
 								{isOpen ? (
 									<XIcon className="block h-6 w-6" aria-hidden="true" />
