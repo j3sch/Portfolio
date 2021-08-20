@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import OpenProjectLinkBtn from './OpenProjectLinkBtn';
 import { Fade } from 'react-awesome-reveal';
+import OpenProjectLinkBtn from './OpenProjectLinkBtn';
+
 interface Props {
 	image: string;
 	title: string;
@@ -9,7 +10,7 @@ interface Props {
 	website?: string;
 }
 
-export default function CardProjects(props: Props) {
+export default function CardProjects(props: Props): JSX.Element {
 	const { image, title, description, github, website } = props;
 
 	return (
@@ -19,8 +20,8 @@ export default function CardProjects(props: Props) {
 					<Image
 						src={image}
 						alt="Bild vom Projekt"
-						layout={'fill'}
-						objectFit={'cover'}
+						layout="fill"
+						objectFit="cover"
 						priority
 						className="rounded-t-xl"
 					/>

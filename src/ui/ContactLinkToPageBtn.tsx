@@ -5,11 +5,14 @@ interface props {
 	url: string;
 }
 
-export default function Button({ name, url }: props) {
+export default function Button({ name, url }: props): JSX.Element {
 	return (
 		<div className="p-2">
 			<Link href={url}>
-				<button className="bg-white ring-1 hover:ring-2 ring-gray-300 rounded-lg  w-[rem] h-24 flex items-center text-center justify-center text-xl">
+				<button
+					type="button"
+					className="bg-white ring-1 hover:ring-2 ring-gray-300 rounded-lg  w-[rem] h-24 flex items-center text-center justify-center text-xl"
+				>
 					{name}
 				</button>
 			</Link>

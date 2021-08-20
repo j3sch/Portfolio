@@ -1,14 +1,14 @@
 import { RoughNotationGroup } from 'react-rough-notation';
-import { TextHighlight } from '~/ui/TextHighlight';
 import { useEffect, useState } from 'react';
-import { shuffleArray } from '~/lib/shuffleArray';
-import { LIGHT_COLORS } from '~/lib/constants';
 import Image from 'next/image';
+import TextHighlight from '~/ui/TextHighlight';
+import shuffleArray from '~/lib/shuffleArray';
+import LIGHT_COLORS from '~/lib/LIGHT_COLORS';
 
 // Shuffle our colors and store them in state so the order is persisted during
 // React re-renders
 
-export default function Welcome() {
+export default function Welcome(): JSX.Element {
 	const [colors, setColors] = useState<string[]>([]);
 
 	useEffect(() => {
@@ -21,7 +21,7 @@ export default function Welcome() {
 				className="space-y-12 flex w-full flex-col text-center md:text-left overflow-hidden p-6 md:p-12 lg:p-24"
 				id="welcome"
 			>
-				<RoughNotationGroup show={true}>
+				<RoughNotationGroup show>
 					<h1 className="w-full leading-tight">
 						Hey, ich bin <br />
 						<TextHighlight color={colors[0]}>Jens Schlegel</TextHighlight>

@@ -2,7 +2,7 @@ import education from '~/data/education';
 import practica from '~/data/practica';
 import DataTable from '~/ui/DataTable';
 
-export default function AboutMe() {
+export default function AboutMe(): JSX.Element {
 	return (
 		<>
 			<div

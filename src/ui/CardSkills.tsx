@@ -1,13 +1,14 @@
 import { ReactNode } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import Image from 'next/image';
+
 interface Props {
 	Icon: ReactNode;
 	title: string;
 	skills: string[];
 }
-import Image from 'next/image';
 
-export default function Card(props: Props) {
+export default function CardSkills(props: Props): JSX.Element {
 	const { Icon, title, skills } = props;
 
 	return (
@@ -18,7 +19,7 @@ export default function Card(props: Props) {
 				<div className="flex">
 					{skills.map((item) => {
 						return (
-							<div className="px-1">
+							<div key={item} className="px-1">
 								<Image
 									src={item}
 									alt="Icon von Skill Kategorie"

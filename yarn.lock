@@ -248,12 +248,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@heroicons/react@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@heroicons/react@npm:1.0.3"
+"@heroicons/react@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@heroicons/react@npm:1.0.4"
   peerDependencies:
     react: ">= 16"
-  checksum: 26dec73bccff69de8390fecb9441db620fe20467c87135318fc22c15e31afe2f50924e94ea7943c43649125f7536794e5a36610b8c261a52256b2da26f88c4c2
+  checksum: 08f2853a49e51f274f22e8e1bb4e7d8a49456b7eb770447da66fd06ac05bf821ddf5d93170088d61ec44ae66cfbdc877c287861d5a3d22aad1785659502e3a71
   languageName: node
   linkType: hard
 
@@ -3038,6 +3038,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"heroicons@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "heroicons@npm:1.0.4"
+  checksum: b01e6c159150dbbb398d4b186391104169a90468b1fa80d32425bb970954a477e922e07461509e8ca4241e7c93933ce3ca1cecac3221096ab74de89915fc4854
+  languageName: node
+  linkType: hard
+
 "hmac-drbg@npm:^1.0.1":
   version: 1.0.1
   resolution: "hmac-drbg@npm:1.0.1"
@@ -5812,7 +5819,7 @@ resolve@^2.0.0-next.3:
   resolution: "starter-template@workspace:."
   dependencies:
     "@headlessui/react": ^1.4.0
-    "@heroicons/react": ^1.0.3
+    "@heroicons/react": ^1.0.4
     "@react-hook/window-size": ^3.0.7
     "@tailwindcss/typography": ^0.4.1
     "@types/css-font-loading-module": ^0.0.6
@@ -5836,6 +5843,7 @@ resolve@^2.0.0-next.3:
     eslint-plugin-prettier: ^3.4.0
     eslint-plugin-react: ^7.24.0
     eslint-plugin-react-hooks: ^4.2.0
+    heroicons: ^1.0.4
     husky: ^7.0.1
     lint-staged: ^11.1.2
     next: ^11.1.0

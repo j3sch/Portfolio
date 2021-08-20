@@ -1,40 +1,11 @@
-import ProjectCard from '~/ui/ProjectCard';
-import projects from '~/data/projects';
-import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
-import { getNumberOfCards } from '~/lib/getNumberOfCards';
+import projects from '~/data/projects';
+import ProjectCard from '~/ui/ProjectCard';
+import getNumberOfCards from '~/lib/getNumberOfCards';
 
-export default function Projects() {
+export default function Projects(): JSX.Element {
 	SwiperCore.use([Pagination]);
-
-	const [currentCardIndex, setCurrentCardIndex] = useState(0);
-	const [currentCards, setCurrentCards] = useState([
-		{
-			image: '/monopoly.png',
-			title: 'Monopoly',
-			description:
-				'Ein Online Browser spiel, indem 4 Spieler gegeneinander spielen können.',
-			github: 'https://github.com/J3ns6/MonopolySE3',
-			website: 'https://monopoly-fro.vercel.app/',
-		},
-	]);
-
-	let numberOfCards = getNumberOfCards();
-
-	useEffect(() => {
-		displayedCards();
-	}, [currentCardIndex, numberOfCards]);
-
-	function displayedCards() {
-		let currentCardArray: any = [];
-		for (let i = currentCardIndex; i < currentCardIndex + numberOfCards; i++) {
-			if (projects.length > i) {
-				currentCardArray.push(projects[i]);
-			}
-		}
-		setCurrentCards(currentCardArray);
-	}
 
 	return (
 		<div
@@ -53,7 +24,7 @@ export default function Projects() {
 			>
 				{projects.map((item) => {
 					return (
-						<SwiperSlide>
+						<SwiperSlide key={item.title}>
 							<ProjectCard
 								image={item.image}
 								title={item.title}

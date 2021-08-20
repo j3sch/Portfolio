@@ -1,6 +1,6 @@
 import CopyToClipboard from '~/ui/ContactFields';
 
-export default function ContactMe() {
+export default function ContactMe(): JSX.Element {
 	return (
 		<div className="w-screen h-screen p-6 md:p-12 lg:p-24" id="contactMe">
 			<h1>Kontaktiere mich</h1>

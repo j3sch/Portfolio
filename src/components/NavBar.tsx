@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, MouseEvent } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
+/* eslint no-param-reassign: "off" */
 
 const navigation = [
 	{ name: 'Hey', href: '#welcome' },
@@ -15,9 +16,9 @@ function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-const handleClick = (e: any) => {
+const handleClick = (e: MouseEvent<HTMLElement>) => {
 	e.preventDefault();
-	const target = e.target.getAttribute('href');
+	const target = (e.target as any).getAttribute('href');
 	const location = document.querySelector(target).offsetTop;
 	window.scrollTo({
 		left: 0,
@@ -25,7 +26,7 @@ const handleClick = (e: any) => {
 	});
 };
 
-const scrollToTop = (e: any) => {
+const scrollToTop = (e: MouseEvent<HTMLElement>) => {
 	e.preventDefault();
 
 	window.scrollTo({
@@ -37,12 +38,6 @@ const scrollToTop = (e: any) => {
 export default function NavBar(): JSX.Element {
 	const [current, setCurrent] = useState('Hey');
 	const [shadowActive, setShadowActiv] = useState('');
-	const [isOpen, setIsOpen] = useState(false);
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-	});
-
-
 
 	function handleScroll() {
 		const pageHight = document.documentElement.clientHeight - 10;
@@ -66,6 +61,10 @@ export default function NavBar(): JSX.Element {
 		}
 	}
 
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+	});
+
 	return (
 		<Disclosure
 			as="nav"
@@ -75,14 +74,15 @@ export default function NavBar(): JSX.Element {
 				<>
 					<div className="px-3 sm:px-6 lg:px-8 bg-white">
 						<div className="relative flex items-center justify-between h-16">
-							<div
+							<button
+								type="button"
 								className="flex-shrink-0 text-black flex items-center text-2xl font-semibold"
 								onClick={scrollToTop}
 							>
 								Jens Schlegel
-							</div>
+							</button>
 							<div className="absolute inset-y-0 right-0 flex items-center md:hidden">
-								{/* Mobile menu button*/}
+								{/* Mobile menu button */}
 								<Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-black focus:text-white focus:bg-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 									<span className="sr-only">Open main menu</span>
 									{open ? (
@@ -119,7 +119,10 @@ export default function NavBar(): JSX.Element {
 							</div>
 							<div className="absolute inset-y-0 right-0 items-center pr-2 sm:static md:inset-auto md:ml-6 sm:pr-0 md:flex hidden">
 								<Link href="https://github.com/J3ns6">
-									<button className="bg-white p-0.5 rounded-full w-7 h-7 items-center justify-center flex focus:outline-none focus-visible:ring-2 focus:ring-offset-2 focus-visible:ring-offset-gray-800 focus-visible:ring-white">
+									<button
+										type="button"
+										className="bg-white p-0.5 rounded-full w-7 h-7 items-center justify-center flex focus:outline-none focus-visible:ring-2 focus:ring-offset-2 focus-visible:ring-offset-gray-800 focus-visible:ring-white"
+									>
 										<span className="sr-only">Github Profil</span>
 										<svg
 											width="1024"
@@ -144,26 +147,27 @@ export default function NavBar(): JSX.Element {
 						<div className="px-2 pt-2 pb-3 space-y-1 bg-white flex flex-col justify-center">
 							{navigation.map((item) => (
 								<Disclosure.Button
-									onClick={(e: any) => {
+									key={item.name}
+									onClick={(e: MouseEvent<HTMLElement>) => {
 										handleClick(e);
 										setCurrent(item.name);
 										open = false;
-									}}>
-								<a
-									key={item.name}
-									href={item.href}
-									className={classNames(
-										item.name === current
-											? 'bg-black text-white'
-											: 'text-black hover:bg-gray-600 hover:text-white',
-										'block px-3 py-2 rounded-md text-base font-medium',
-									)}
-									aria-current={current ? 'page' : undefined}
+									}}
 								>
-									{item.name}
-								</a>
-																</Disclosure.Button>
-
+									<a
+										key={item.name}
+										href={item.href}
+										className={classNames(
+											item.name === current
+												? 'bg-black text-white'
+												: 'text-black hover:bg-gray-600 hover:text-white',
+											'block px-3 py-2 rounded-md text-base font-medium',
+										)}
+										aria-current={current ? 'page' : undefined}
+									>
+										{item.name}
+									</a>
+								</Disclosure.Button>
 							))}
 						</div>
 					</Disclosure.Panel>

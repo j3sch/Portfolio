@@ -1,11 +1,11 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination } from 'swiper/core';
 import CardSkills from '~/ui/CardSkills';
 import skills from '~/data/skills';
 import selectIcon from '~/lib/selectIcon';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper/core';
-import { getNumberOfCards } from '~/lib/getNumberOfCards';
+import getNumberOfCards from '~/lib/getNumberOfCards';
 
-export default function Skills() {
+export default function Skills(): JSX.Element {
 	SwiperCore.use([Pagination]);
 
 	return (
@@ -25,7 +25,7 @@ export default function Skills() {
 			>
 				{skills.map((item) => {
 					return (
-						<SwiperSlide>
+						<SwiperSlide key={item.title}>
 							<CardSkills
 								Icon={selectIcon(item.Icon)}
 								title={item.title}

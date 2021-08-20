@@ -3,7 +3,7 @@ export default [
 		image: '/monopoly.png',
 		title: 'Monopoly',
 		description:
-			'Ein Online Browser spiel, indem 4 Spieler gegeneinander spielen können.',
+			'Online Browserspiel, indem 4 Spieler gegeneinander spielen können.',
 		github: 'https://github.com/J3ns6/MonopolySE3',
 		website: 'https://monopoly-fro.vercel.app/',
 	},
@@ -39,7 +39,7 @@ export default [
 		image: '/musicApp.png',
 		title: 'Music App',
 		description:
-			'Eine Musik App mit dem Genre Eletronic für ein US-amerikanischer Radiosender entwickeln.',
+			'Eine Musik App mit dem Genre Eletronic für ein US-amerikanischer Radiosender designen.',
 		website:
 			'https://xd.adobe.com/view/adddac30-9dd1-410b-b0fd-d325d7828057-f88e/',
 	},
@@ -51,7 +51,7 @@ export default [
 		github: 'https://github.com/J3ns6/MorseTrainer',
 	},
 	{
-		image: '/',
+		image: '/portfolio.png',
 		title: 'Portfolio',
 		description:
 			'Um mich vorzustellen und einen Einblick in meine Fähigkeiten zu geben.',
