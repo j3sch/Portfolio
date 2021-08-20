@@ -37,9 +37,9 @@ export default function Welcome(): JSX.Element {
 					</p>
 				</RoughNotationGroup>
 			</div>
-			<div className="flex w-72 sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-full relative md:absolute md:right-12 xl:right-20 2xl:right-32 justify-end self-center md:self-start xl:self-center">
+			<div className="flex w-72 sm:w-[21rem] lg:w-[25rem] xl:w-[32rem] 2xl:w-full relative md:absolute md:right-12 xl:right-20 2xl:right-32 justify-end self-center md:self-start xl:self-center">
 				<Image
-					src="/19.08.21 komp with shape.png"
+					src="/19.08.21 with shape.png"
 					alt="Bild vom Projekt"
 					width={550}
 					height={678}
