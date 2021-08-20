@@ -76,17 +76,21 @@ export default function NavBar(): JSX.Element {
 						<div className="relative flex items-center justify-between h-16">
 							<button
 								type="button"
-								className="flex-shrink-0 text-black flex items-center text-2xl font-semibold"
+								className="flex-shrink-0 text-black flex items-center text-2xl  font-semibold rounded-md focus-visible:ring-2 focus:outline-none focus-visible:ring-inset p-2 focus-visible:ring-black"
 								onClick={scrollToTop}
 							>
 								Jens Schlegel
 							</button>
 							<div className="absolute inset-y-0 right-0 flex items-center md:hidden">
 								{/* Mobile menu button */}
-								<Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-black focus:text-white focus:bg-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+								<Disclosure.Button
+									className={`inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-black ${
+										open === true && 'bg-black text-white'
+									}`}
+								>
 									<span className="sr-only">Open main menu</span>
 									{open ? (
-										<XIcon className="block h-6 w-6" aria-hidden="true" />
+										<XIcon className="block h-6 w-6 group" aria-hidden="true" />
 									) : (
 										<MenuIcon className="block h-6 w-6" aria-hidden="true" />
 									)}
@@ -106,7 +110,7 @@ export default function NavBar(): JSX.Element {
 												className={classNames(
 													item.name === current
 														? 'text-black font-bold border-b-2 border-black p-1'
-														: 'text-gray-500 hover:bg-gray-600 hover:text-white font-medium rounded-md px-3 py-2',
+														: 'text-gray-500 hover:bg-gray-600 hover:text-white font-medium rounded-md px-3 py-2 focus-visible:ring-2 focus:outline-none focus-visible:ring-inset focus-visible:ring-black',
 													'text-base ',
 												)}
 												aria-current={current ? 'page' : undefined}

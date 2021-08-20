@@ -5,9 +5,6 @@ import TextHighlight from '~/ui/TextHighlight';
 import shuffleArray from '~/lib/shuffleArray';
 import LIGHT_COLORS from '~/lib/LIGHT_COLORS';
 
-// Shuffle our colors and store them in state so the order is persisted during
-// React re-renders
-
 export default function Welcome(): JSX.Element {
 	const [colors, setColors] = useState<string[]>([]);
 
