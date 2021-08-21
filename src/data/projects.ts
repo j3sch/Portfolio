@@ -3,7 +3,7 @@ export default [
 		image: '/monopoly.png',
 		title: 'Monopoly',
 		description:
-			'Online Browserspiel, indem 4 Spieler gegeneinander spielen können.',
+			'Online Browserspiel, in dem 4 Spieler gegeneinander spielen können.',
 		github: 'https://github.com/J3ns6/MonopolySE3',
 		website: 'https://monopoly-fro.vercel.app/',
 	},
@@ -11,7 +11,7 @@ export default [
 		image: '/fitnessApp.jpg',
 		title: 'Fitness App für Leichtathleten',
 		description:
-			'Eine App bei dem zufällige Trainingspläne für Leichtathleten erstellt werden.',
+			'Eine App, bei der zufällige Trainingspläne erstellt werden.',
 		github: 'https://github.com/J3ns6/FitnessAppMAD1.git',
 	},
 	{

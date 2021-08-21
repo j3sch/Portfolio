@@ -16,7 +16,7 @@ export default function AboutMe(): JSX.Element {
 				className="w-screen h-auto min-h-screen p-6 md:p-12 lg:p-24"
 				id="aboutMe"
 			>
-				<h1>Praktikas</h1>
+				<h1>Praktika</h1>
 				<DataTable data={practica} />
 			</div>
 		</>
