@@ -38,7 +38,7 @@ export default function CardProjects(props: Props): JSX.Element {
 					<p className="text-2xl">{title}</p>
 					<p>{description}</p>
 				</div>
-				<p className="md:hidden text-blue-500 text-center w-full absolute bottom-6">
+				<p className="md:hidden text-blue-500 text-center w-full absolute bottom-5">
 					Show more
 				</p>
 			</div>
