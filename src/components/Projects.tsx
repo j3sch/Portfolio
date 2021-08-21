@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
 import projects from '~/data/projects';
-import ProjectCard from '~/ui/ProjectCard';
+import ProjectCard from '~/ui/projects/ProjectCard';
 import getNumberOfCards from '~/lib/getNumberOfCards';
 
 export default function Projects(): JSX.Element {

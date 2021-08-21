@@ -1,17 +1,13 @@
 import { Dispatch, SetStateAction } from 'react';
 import { DuplicateIcon } from '@heroicons/react/outline';
 
-interface props {
-	btnName: string;
+interface Props {
 	copyText: string;
 	setClicked: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function CopyClipboardBtn({
-	btnName,
-	copyText,
-	setClicked,
-}: props): JSX.Element {
+export default function CopyClipboardBtn(props: Props): JSX.Element {
+	const { copyText, setClicked } = props;
 	return (
 		<div className="p-2 pl-1">
 			<button
@@ -23,7 +19,7 @@ export default function CopyClipboardBtn({
 				}}
 			>
 				<DuplicateIcon className="text-gray-400 w-11 h-11 p-1" />
-				{btnName}
+				Text kopieren
 			</button>
 		</div>
 	);

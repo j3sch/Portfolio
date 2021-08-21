@@ -1,11 +1,12 @@
 import Link from 'next/link';
 
-interface props {
+interface Props {
 	name: string;
 	url: string;
 }
 
-export default function Button({ name, url }: props): JSX.Element {
+export default function Button(props: Props): JSX.Element {
+	const { url, name } = props;
 	return (
 		<div className="p-2">
 			<Link href={url}>

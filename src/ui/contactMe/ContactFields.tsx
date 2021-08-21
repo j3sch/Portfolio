@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import CopyClipboardBtn from '~/ui/CopyClipboardBtn';
-import SendMailBtn from '~/ui/SendMailBtn';
+import CopyClipboardBtn from '~/ui/contactMe/CopyClipboardBtn';
+import SendMailBtn from '~/ui/contactMe/SendMailBtn';
 
-interface props {
+interface Props {
 	name: string;
 }
 
-export default function ContactFields({ name }: props): JSX.Element {
+export default function ContactFields(props: Props): JSX.Element {
+	const { name } = props;
 	const [clicked, setClicked] = useState(false);
 
 	useEffect(() => {
@@ -32,12 +33,8 @@ export default function ContactFields({ name }: props): JSX.Element {
 					</p>
 					<div className="group-hover:flex w-full hidden">
 						<Fade duration={500}>
-							<SendMailBtn btnName="Email versenden" mail={name} />
-							<CopyClipboardBtn
-								btnName="Text kopieren"
-								copyText={name}
-								setClicked={setClicked}
-							/>
+							<SendMailBtn mail={name} />
+							<CopyClipboardBtn copyText={name} setClicked={setClicked} />
 						</Fade>
 					</div>
 				</div>

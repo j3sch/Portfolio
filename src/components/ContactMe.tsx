@@ -1,4 +1,4 @@
-import CopyToClipboard from '~/ui/ContactFields';
+import CopyToClipboard from '~/ui/contactMe/ContactFields';
 
 export default function ContactMe(): JSX.Element {
 	return (

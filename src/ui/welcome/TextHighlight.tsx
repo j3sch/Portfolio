@@ -1,13 +1,13 @@
 import React from 'react';
 import { RoughNotation } from 'react-rough-notation';
 
-export default function TextHighlight({
-	color,
-	children,
-}: {
+interface Props {
 	color: string;
 	children: string;
-}): JSX.Element {
+}
+
+export default function TextHighlight(props: Props): JSX.Element {
+	const { color, children } = props;
 	const animationDuration = Math.floor(30 * children.length);
 
 	return (

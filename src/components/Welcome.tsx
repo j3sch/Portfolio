@@ -1,7 +1,7 @@
 import { RoughNotationGroup } from 'react-rough-notation';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import TextHighlight from '~/ui/TextHighlight';
+import TextHighlight from '~/ui/welcome/TextHighlight';
 import shuffleArray from '~/lib/shuffleArray';
 import LIGHT_COLORS from '~/lib/LIGHT_COLORS';
 

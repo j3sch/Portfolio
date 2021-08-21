@@ -1,8 +1,6 @@
 import { Fade } from 'react-awesome-reveal';
 
-export default function DataTable({
-	data,
-}: {
+interface Props {
 	data: {
 		id: number;
 		year: string;
@@ -10,7 +8,11 @@ export default function DataTable({
 		address: string;
 		graduation?: string;
 	}[];
-}): JSX.Element {
+}
+
+export default function DataTable(props: Props): JSX.Element {
+	const { data } = props;
+
 	return (
 		<Fade>
 			<div className="flex flex-col items-center mt-14">

@@ -2,7 +2,7 @@ import { useWindowWidth } from '@react-hook/window-size';
 
 let width = 0;
 
-export default function GetNumberOfCards(): number {
+export default function getNumberOfCards(): number {
 	width = useWindowWidth();
 
 	if (width <= 800) {

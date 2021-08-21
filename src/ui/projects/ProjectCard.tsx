@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Fade } from 'react-awesome-reveal';
-import OpenProjectLinkBtn from './OpenProjectLinkBtn';
+import OpenProjectLinkBtn from '~/ui/projects/OpenProjectLinkBtn';
 
 interface Props {
 	image: string;
@@ -19,7 +19,7 @@ export default function CardProjects(props: Props): JSX.Element {
 				<div className="relative w-full h-40 group-hover:hidden">
 					<Image
 						src={image}
-						alt="Bild vom Projekt"
+						alt={title}
 						layout="fill"
 						objectFit="cover"
 						priority

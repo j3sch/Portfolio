@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
-import CardSkills from '~/ui/CardSkills';
+import CardSkills from '~/ui/skills/CardSkills';
 import skills from '~/data/skills';
 import selectIcon from '~/lib/selectIcon';
 import getNumberOfCards from '~/lib/getNumberOfCards';

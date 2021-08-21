@@ -1,11 +1,11 @@
 import { MailIcon } from '@heroicons/react/outline';
 
 interface Props {
-	btnName: string;
 	mail: string;
 }
 
-export default function SendMailBtn({ btnName, mail }: Props): JSX.Element {
+export default function SendMailBtn(props: Props): JSX.Element {
+	const { mail } = props;
 	return (
 		<div className="p-2 pr-1">
 			<button
@@ -16,7 +16,7 @@ export default function SendMailBtn({ btnName, mail }: Props): JSX.Element {
 				}}
 			>
 				<MailIcon className="text-gray-400 w-11 h-11 p-1" />
-				{btnName}
+				Email versenden
 			</button>
 		</div>
 	);
