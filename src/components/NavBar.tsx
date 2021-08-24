@@ -16,16 +16,6 @@ function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-const handleClick = (e: MouseEvent<HTMLElement>) => {
-	e.preventDefault();
-	const target = (e.target as any).getAttribute('href');
-	const location = document.querySelector(target).offsetTop;
-	window.scrollTo({
-		left: 0,
-		top: location,
-	});
-};
-
 const scrollToTop = (e: MouseEvent<HTMLElement>) => {
 	e.preventDefault();
 
@@ -100,23 +90,24 @@ export default function NavBar(): JSX.Element {
 								<div className="hidden md:block md:ml-6">
 									<div className="flex space-x-4 text-center items-center">
 										{navigation.map((item) => (
-											<a
-												onClick={(e) => {
-													handleClick(e);
-													setCurrent(item.name);
-												}}
-												key={item.name}
-												href={item.href}
-												className={classNames(
-													item.name === current
-														? 'text-black font-bold border-b-2 border-black p-1'
-														: 'text-gray-500 hover:bg-gray-600 hover:text-white font-medium rounded-md px-3 py-2 focus-visible:ring-2 focus:outline-none focus-visible:ring-inset focus-visible:ring-black',
-													'text-base ',
-												)}
-												aria-current={current ? 'page' : undefined}
-											>
-												{item.name}
-											</a>
+											<Link href={item.href}>
+												<a
+													onClick={() => {
+														setCurrent(item.name);
+													}}
+													key={item.name}
+													href={item.href}
+													className={classNames(
+														item.name === current
+															? 'text-black font-bold border-b-2 border-black p-1'
+															: 'text-gray-500 hover:bg-gray-600 hover:text-white font-medium rounded-md px-3 py-2 focus-visible:ring-2 focus:outline-none focus-visible:ring-inset focus-visible:ring-black',
+														'text-base ',
+													)}
+													aria-current={current ? 'page' : undefined}
+												>
+													{item.name}
+												</a>
+											</Link>
 										))}
 									</div>
 								</div>
@@ -152,8 +143,7 @@ export default function NavBar(): JSX.Element {
 							{navigation.map((item) => (
 								<Disclosure.Button
 									key={item.name}
-									onClick={(e: MouseEvent<HTMLElement>) => {
-										handleClick(e);
+									onClick={() => {
 										setCurrent(item.name);
 										open = false;
 									}}
