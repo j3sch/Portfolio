@@ -1,5 +1,5 @@
 import education from '~/data/education';
-import practica from '~/data/practica';
+import internships from '~/data/internships';
 import DataTable from '~/ui/aboutMe/DataTable';
 
 export default function AboutMe(): JSX.Element {
@@ -17,7 +17,7 @@ export default function AboutMe(): JSX.Element {
 				id="aboutMe"
 			>
 				<h1>Praktika</h1>
-				<DataTable data={practica} />
+				<DataTable data={internships} />
 			</div>
 		</>
 	);
