@@ -10,7 +10,7 @@ export default function Skills(): JSX.Element {
 
 	return (
 		<div
-			className="w-screen h-auto min-h-screen space-y-16 p-6 md:p-12 lg:p-24"
+			className="w-screen h-auto min-h-screen space-y-16 p-4 md:p-12 lg:p-24"
 			id="skills"
 		>
 			<h1>Skills</h1>

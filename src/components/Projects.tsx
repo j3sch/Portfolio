@@ -9,7 +9,7 @@ export default function Projects(): JSX.Element {
 
 	return (
 		<div
-			className="w-screen h-auto min-h-screen space-y-16 p-6 md:p-12 lg:p-24"
+			className="w-screen h-auto min-h-screen space-y-16 p-4 md:p-12 lg:p-24"
 			id="projects"
 		>
 			<h1>Projekte</h1>

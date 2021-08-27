@@ -31,7 +31,7 @@ export default function DataTable(props: Props): JSX.Element {
 							<p className="text-black md:pl-12 xl:pl-24 w-12 sm:w-80 text-center">
 								{item.year}
 							</p>
-							<div className={'pl-10 md:pl-15 py-3 w-full'}>
+							<div className={'pl-16 py-3 w-full'}>
 								<p className="font-semibold">{item.name}</p>
 								<p>{item.type}</p>
 								<p>{item.graduation}</p>
@@ -50,7 +50,7 @@ export default function DataTable(props: Props): JSX.Element {
 							<p className="text-black md:pl-12 xl:pl-24 w-12 sm:w-80 text-center">
 								{item.year}
 							</p>
-							<div className={'pl-10 md:pl-15 py-3 w-full'}>
+							<div className={'pl-16  py-3 w-full'}>
 								<p className="font-semibold">{item.name}</p>
 								<p>{item.type}</p>
 								<p>{item.graduation}</p>

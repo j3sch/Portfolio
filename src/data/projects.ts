@@ -10,8 +10,7 @@ export default [
 	{
 		image: '/fitnessApp.jpg',
 		title: 'Fitness App für Leichtathleten',
-		description:
-			'Eine App, bei der zufällige Trainingspläne erstellt werden.',
+		description: 'Eine App, bei der zufällige Trainingspläne erstellt werden.',
 		github: 'https://github.com/J3ns6/FitnessAppMAD1.git',
 	},
 	{

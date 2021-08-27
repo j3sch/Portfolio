@@ -16,7 +16,7 @@ export default function Welcome(): JSX.Element {
 	return (
 		<div className="flex container w-screen flex-col md:flex-row space-y-10 xl:space-y-0 lg:space-y-20">
 			<div
-				className="space-y-12 flex w-full flex-col text-center md:text-left overflow-hidden p-6 md:p-12 lg:p-24"
+				className="space-y-12 flex w-full flex-col text-center md:text-left overflow-hidden p-4 md:p-12 lg:p-24"
 				id="welcome"
 			>
 				<RoughNotationGroup show>
@@ -54,11 +54,9 @@ export default function Welcome(): JSX.Element {
 					@keyframes unblur {
 						from {
 							filter: blur(30px);
-							scale: 1.15;
 						}
 						to {
 							filter: blur(0);
-							scale: 1;
 						}
 					}
 				`}</style>
