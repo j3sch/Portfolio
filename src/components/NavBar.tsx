@@ -90,7 +90,7 @@ export default function NavBar(): JSX.Element {
 								<div className="hidden md:block md:ml-6">
 									<div className="flex space-x-4 text-center items-center">
 										{navigation.map((item) => (
-											<Link href={item.href}>
+											<Link key={item.name} href={item.href}>
 												<a
 													onClick={() => {
 														setCurrent(item.name);
@@ -149,7 +149,6 @@ export default function NavBar(): JSX.Element {
 									}}
 								>
 									<a
-										key={item.name}
 										href={item.href}
 										className={classNames(
 											item.name === current
