@@ -23,7 +23,7 @@ export default function ContactFields(props: Props): JSX.Element {
 	return (
 		<div>
 			{clicked === true ? (
-				<div className="bg-gray-400 bg-opacity-30 text-4xl rounded-lg w-full xl:w-[67.5rem] h-20 md:h-24 lg:h-28 flex items-center text-center justify-center">
+				<div className="bg-gray-400 bg-opacity-30 text-4xl rounded-lg w-[19.5rem] sm:w-[29rem] md:w-[36rem] lg:w-[41.5rem] xl:w-[65rem] h-20 md:h-24 lg:h-28 flex items-center text-center justify-center">
 					<p className="px-6">Text kopiert</p>
 				</div>
 			) : (
