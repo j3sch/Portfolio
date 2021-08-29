@@ -15,6 +15,10 @@ html {
 	height: auto;
 }
 
+.contact-me-container {
+	height: calc(100vh - 10rem);
+}
+
 h1 {
 	@apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold leading-tight md:pb-6 lg:pb-12;
 }
@@ -38,20 +42,20 @@ h1 {
 
 .img--blur-down .img__element,
 .img--blur-down .img__placeholder {
-  filter: blur(var(--img-blur));
-  transform: scale(var(--img-scale));
+	filter: blur(var(--img-blur));
+	transform: scale(var(--img-scale));
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .img--blur-down .img__element {
-    transition: var(--img-transition-duration) ease;
-    transition-property: filter, opacity, transform;
-    will-change: filter, transform;
-  }
+	.img--blur-down .img__element {
+		transition: var(--img-transition-duration) ease;
+		transition-property: filter, opacity, transform;
+		will-change: filter, transform;
+	}
 }
 
 .img--blur-down.is-loaded .img__element {
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0);
+	opacity: 1;
+	transform: scale(1);
+	filter: blur(0);
 }
