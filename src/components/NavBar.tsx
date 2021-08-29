@@ -55,6 +55,7 @@ export default function NavBar(): JSX.Element {
 		window.addEventListener('scroll', handleScroll);
 	});
 
+
 	return (
 		<Disclosure
 			as="nav"

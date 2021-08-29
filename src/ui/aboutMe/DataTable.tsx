@@ -36,9 +36,9 @@ export default function DataTable(props: Props): JSX.Element {
 								<p>{item.type}</p>
 								<p>{item.graduation}</p>
 								<ul className="list-disc list-inside">
-									{item.activities?.map((activity) => {
-										return <li key={activity}>{activity}</li>;
-									})}
+									{item.activities?.map((activity) => (
+										<li key={activity}>{activity}</li>
+									))}
 								</ul>
 							</div>
 						</div>
@@ -55,9 +55,9 @@ export default function DataTable(props: Props): JSX.Element {
 								<p>{item.type}</p>
 								<p>{item.graduation}</p>
 								<ul className="list-disc list-inside">
-									{item.activities?.map((activity) => {
-										return <li key={activity}>{activity}</li>;
-									})}
+									{item.activities?.map((activity) => (
+										<li key={activity}>{activity}</li>
+									))}
 								</ul>
 							</div>
 						</div>

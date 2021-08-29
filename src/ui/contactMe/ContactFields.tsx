@@ -12,11 +12,11 @@ export default function ContactFields(props: Props): JSX.Element {
 	const [clicked, setClicked] = useState(false);
 
 	useEffect(() => {
-		const clickeds = setTimeout(() => {
+		const clickedTimer = setTimeout(() => {
 			setClicked(false);
 		}, 2000);
 		return () => {
-			clearTimeout(clickeds);
+			clearTimeout(clickedTimer);
 		};
 	});
 

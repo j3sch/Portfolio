@@ -23,17 +23,15 @@ export default function Skills(): JSX.Element {
 				}}
 				className="h-[27rem] sm:h-[28rem]"
 			>
-				{skills.map((item) => {
-					return (
-						<SwiperSlide key={item.title}>
-							<CardSkills
-								Icon={selectIcon(item.Icon)}
-								title={item.title}
-								skills={item.skills}
-							/>
-						</SwiperSlide>
-					);
-				})}
+				{skills.map((item) => (
+					<SwiperSlide key={item.title}>
+						<CardSkills
+							Icon={selectIcon(item.Icon)}
+							title={item.title}
+							skills={item.skills}
+						/>
+					</SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	);

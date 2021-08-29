@@ -22,19 +22,17 @@ export default function Projects(): JSX.Element {
 				}}
 				className="h-[27rem] sm:h-[28rem]"
 			>
-				{projects.map((item) => {
-					return (
-						<SwiperSlide key={item.title}>
-							<ProjectCard
-								image={item.image}
-								title={item.title}
-								description={item.description}
-								github={item.github}
-								website={item.website}
-							/>
-						</SwiperSlide>
-					);
-				})}
+				{projects.map((item) => (
+					<SwiperSlide key={item.title}>
+						<ProjectCard
+							image={item.image}
+							title={item.title}
+							description={item.description}
+							github={item.github}
+							website={item.website}
+						/>
+					</SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	);
