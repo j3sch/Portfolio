@@ -4,7 +4,7 @@ import Image from 'next/image';
 import TextHighlight from '~/ui/welcome/TextHighlight';
 import shuffleArray from '~/lib/shuffleArray';
 import LIGHT_COLORS from '~/lib/LIGHT_COLORS';
-import profilPicture from 'public/19.08.21 with shape.png';
+import profilPicture from 'public/images/19.08.21 with shape.png';
 export default function Welcome(): JSX.Element {
 	const [colors, setColors] = useState<string[]>([]);
 	const [isLoaded, setIsLoaded] = useState(false);

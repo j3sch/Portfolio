@@ -2,27 +2,27 @@ export default [
 	{
 		Icon: 'DeviceMobileIcon',
 		title: 'Mobile Application Development',
-		skills: ['/android-studio.svg', '/kotlin.png'],
+		skills: ['/images/android-studio.svg', '/images/kotlin.png'],
 	},
 	{
 		Icon: 'CodeIcon',
 		title: 'Full-Stack Development',
 		skills: [
-			'/react.png',
-			'/nextjs.png',
-			'/typescript.png',
-			'/spring.png',
-			'/tailwindcss.png',
+			'/images/react.png',
+			'/images/nextjs.png',
+			'/images/typescript.png',
+			'/images/spring.png',
+			'/images/tailwindcss.png',
 		],
 	},
 	{
 		Icon: 'TemplateIcon',
 		title: 'Ui/Ux',
 		skills: [
-			'/figma.svg',
-			'/adobeXd.png',
-			'/affinityPhoto.jpg',
-			'/affinityDesigner.png',
+			'/images/figma.svg',
+			'/images/adobeXd.png',
+			'/images/affinityPhoto.jpg',
+			'/images/affinityDesigner.png',
 		],
 	},
 ];

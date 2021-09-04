@@ -1,6 +1,6 @@
 export default [
 	{
-		image: '/monopoly.png',
+		image: '/images/monopoly.png',
 		title: 'Monopoly',
 		description:
 			'Online Browserspiel, in dem 4 Spieler gegeneinander spielen können.',
@@ -8,26 +8,26 @@ export default [
 		website: 'https://monopoly-fro.vercel.app/',
 	},
 	{
-		image: '/fitnessApp.jpg',
+		image: '/images/fitnessApp.jpg',
 		title: 'Fitness App für Leichtathleten',
 		description: 'Eine App, bei der zufällige Trainingspläne erstellt werden.',
 		github: 'https://github.com/J3ns6/FitnessAppMAD1.git',
 	},
 	{
-		image: '/mathTrainer.png',
+		image: '/images/mathTrainer.png',
 		title: 'Mathe Trainer',
 		description: 'Um die mathematischen Fähigkeiten zu verbessern.',
 		github: 'https://github.com/J3ns6/math-trainer',
 	},
 	{
-		image: '/englishSentenceTrainer.png',
+		image: '/images/englishSentenceTrainer.png',
 		title: 'Englisch Satz Trainer',
 		description: 'Um die englische Grammatik zu üben.',
 		github: 'https://github.com/J3ns6/english-sentence-trainer',
 		website: 'https://english-sentence-trainer.vercel.app/',
 	},
 	{
-		image: '/climateChallenges.png',
+		image: '/images/climateChallenges.png',
 		title: 'Klima/Umwelt Herausforderungen',
 		description:
 			'Schließe Herausforderungen ab, um deinen Fussabdruck zu verbessern.',
@@ -35,7 +35,7 @@ export default [
 			'https://www.figma.com/proto/4LXLTW3LBiu8bUdhNRIVNS/high-fidelity?node-id=1093%3A5970&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1283%3A10478&show-proto-sidebar=1',
 	},
 	{
-		image: '/musicApp.png',
+		image: '/images/musicApp.png',
 		title: 'Music App',
 		description:
 			'Eine Musik App mit dem Genre Eletronic für ein US-amerikanischer Radiosender designen.',
@@ -43,14 +43,14 @@ export default [
 			'https://xd.adobe.com/view/adddac30-9dd1-410b-b0fd-d325d7828057-f88e/',
 	},
 	{
-		image: '/morseTrainer.png',
+		image: '/images/morseTrainer.png',
 		title: 'Morse Trainer',
 		description:
 			'Mit dem Morse-Trainer können Sie das Übersetzen von Wörtern üben. Möglich ist abc zu Morse und Morse zu abc.',
 		github: 'https://github.com/J3ns6/MorseTrainer',
 	},
 	{
-		image: '/portfolio.png',
+		image: '/images/portfolio.png',
 		title: 'Portfolio',
 		description:
 			'Um mich vorzustellen und einen Einblick in meine Fähigkeiten zu geben.',
