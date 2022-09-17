@@ -1,7 +1,7 @@
 import { useState, useEffect, MouseEvent } from 'react';
 import { Disclosure } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 /* eslint no-param-reassign: "off" */
 
 const navigation = [
@@ -28,7 +28,6 @@ const scrollToTop = (e: MouseEvent<HTMLElement>) => {
 export default function NavBar(): JSX.Element {
 	const [current, setCurrent] = useState('Hey');
 	const [shadowActive, setShadowActiv] = useState('');
-
 	function handleScroll() {
 		const pageHight = document.documentElement.clientHeight - 10;
 
@@ -55,7 +54,6 @@ export default function NavBar(): JSX.Element {
 		window.addEventListener('scroll', handleScroll);
 	});
 
-
 	return (
 		<Disclosure
 			as="nav"
@@ -81,9 +79,12 @@ export default function NavBar(): JSX.Element {
 								>
 									<span className="sr-only">Open main menu</span>
 									{open ? (
-										<XIcon className="block h-6 w-6 group" aria-hidden="true" />
+										<XMarkIcon
+											className="block h-6 w-6 group"
+											aria-hidden="true"
+										/>
 									) : (
-										<MenuIcon className="block h-6 w-6" aria-hidden="true" />
+										<Bars3Icon className="block h-6 w-6" aria-hidden="true" />
 									)}
 								</Disclosure.Button>
 							</div>

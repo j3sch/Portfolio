@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper/core';
+import SwiperCore, { Pagination } from 'swiper';
 import projects from '~/data/projects';
 import ProjectCard from '~/ui/projects/ProjectCard';
 import getNumberOfCards from '~/lib/getNumberOfCards';
