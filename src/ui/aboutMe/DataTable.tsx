@@ -61,7 +61,7 @@ export default function DataTable(props: Props): JSX.Element {
 					) : (
 						<div
 							key={item.name}
-							className="flex items-center border-t-2 w-full px-2 sm:px-4 lg:px-6 lg:w-3/4 2xl:w-[58%]  border-gray-500 text-md md:text-lg border-opacity-30"
+							className="flex items-center border-t-2 w-full px-2 sm:px-4 lg:px-6 lg:w-3/4 2xl:w-[58%]  border-gray-300 text-md md:text-lg border-opacity-30"
 						>
 							<p className="text-black md:pl-12 xl:pl-24 w-12 sm:w-80 text-center">
 								{item.year}

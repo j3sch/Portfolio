@@ -4,7 +4,8 @@ import Image from 'next/image';
 import TextHighlight from '~/ui/welcome/TextHighlight';
 import shuffleArray from '~/lib/shuffleArray';
 import LIGHT_COLORS from '~/lib/LIGHT_COLORS';
-import profilPicture from 'public/images/19.08.21 with shape.png';
+import profilPicture from 'public/images/2022 with shape1.png';
+
 export default function Welcome(): JSX.Element {
 	const [colors, setColors] = useState<string[]>([]);
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -25,8 +26,8 @@ export default function Welcome(): JSX.Element {
 						<TextHighlight color={colors[0]}>Jens Schlegel</TextHighlight>
 					</h1>
 					<p className="w-full md:w-[60%] lg:w-[55%] xl:w-[55%] 2xl:w-[50%] text-2xl font-sans md:text-3xl lg:text-4xl xl:text-5xl xl:leading-tight">
-						Ich bin Softwareentwickler und studiere{' '}
-						<TextHighlight color={colors[1]}>"Mobile Medien"</TextHighlight> an
+						Ich bin Webentwickler und studiere{' '}
+						<TextHighlight color={colors[1]}>Mobile Medien</TextHighlight> an
 						der{' '}
 						<TextHighlight color={colors[2]}>
 							Hochschule der Medien

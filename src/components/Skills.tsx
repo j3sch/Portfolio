@@ -3,7 +3,7 @@ import SwiperCore, { Pagination } from 'swiper';
 import CardSkills from '~/ui/skills/CardSkills';
 import skills from '~/data/skills';
 import selectIcon from '~/lib/selectIcon';
-import getNumberOfCards from '~/lib/getNumberOfCards';
+import getNumberOfCardsSkills from '~/lib/getNumberOfCardsSkills';
 
 export default function Skills(): JSX.Element {
 	SwiperCore.use([Pagination]);
@@ -16,7 +16,7 @@ export default function Skills(): JSX.Element {
 			<h1>Skills</h1>
 			<Swiper
 				id="swiper-skills"
-				slidesPerView={getNumberOfCards()}
+				slidesPerView={getNumberOfCardsSkills()}
 				spaceBetween={15}
 				pagination={{
 					clickable: true,

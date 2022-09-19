@@ -5,14 +5,11 @@ let width = 0;
 export default function getNumberOfCards(): number {
 	width = useWindowWidth();
 
-	if (width <= 800) {
+	if (width <= 1000) {
 		return 1;
 	}
-	if (width <= 1350) {
+	if (width <= 1550) {
 		return 2;
 	}
-	if (width <= 1636) {
-		return 3;
-	}
-	return 4;
+	return 3;
 }

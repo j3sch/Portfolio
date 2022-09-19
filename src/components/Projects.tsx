@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
+import SwiperCore, { Pagination, Navigation } from 'swiper';
 import projects from '~/data/projects';
 import ProjectCard from '~/ui/projects/ProjectCard';
 import getNumberOfCards from '~/lib/getNumberOfCards';
@@ -16,10 +16,12 @@ export default function Projects(): JSX.Element {
 			<Swiper
 				id="swiper-projects"
 				slidesPerView={getNumberOfCards()}
-				spaceBetween={15}
+				spaceBetween={10}
 				pagination={{
 					clickable: true,
 				}}
+				navigation
+				modules={[Navigation]}
 				className="h-[27rem] sm:h-[28rem]"
 			>
 				{projects.map((item) => (

@@ -8,6 +8,20 @@ export default [
 		website: 'https://monopoly-fro.vercel.app/',
 	},
 	{
+		image: '/images/imagechase.png',
+		title: 'Imagechase',
+		description:
+			'Eine Webanwendung auf der verschiedene Fotowettbewerbe stattfinden können.',
+		github: 'https://github.com/j3sch/imagechase',
+	},
+	{
+		image: '/images/englishSentenceTrainer.png',
+		title: 'Englisch Satz Trainer',
+		description: 'Um die englische Grammatik zu üben.',
+		github: 'https://github.com/J3ns6/english-sentence-trainer',
+		website: 'https://english-sentence-trainer.vercel.app/',
+	},
+	{
 		image: '/images/fitnessApp.jpg',
 		title: 'Fitness App für Leichtathleten',
 		description: 'Eine App, bei der zufällige Trainingspläne erstellt werden.',
@@ -20,19 +34,12 @@ export default [
 		github: 'https://github.com/J3ns6/math-trainer',
 	},
 	{
-		image: '/images/englishSentenceTrainer.png',
-		title: 'Englisch Satz Trainer',
-		description: 'Um die englische Grammatik zu üben.',
-		github: 'https://github.com/J3ns6/english-sentence-trainer',
-		website: 'https://english-sentence-trainer.vercel.app/',
-	},
-	{
 		image: '/images/climateChallenges.png',
 		title: 'Klima/Umwelt Herausforderungen',
 		description:
 			'Schließe Herausforderungen ab, um deinen Fussabdruck zu verbessern.',
 		website:
-			'https://www.figma.com/proto/4LXLTW3LBiu8bUdhNRIVNS/high-fidelity?node-id=1093%3A5970&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1283%3A10478&show-proto-sidebar=1',
+			'https://www.figma.com/proto/4LXLTW3LBiu8bUdhNRIVNS/high-fidelity?page-id=0%3A1&node-id=1283%3A10478&viewport=1068%2C-391%2C0.37&scaling=scale-down&starting-point-node-id=1283%3A10478&show-proto-sidebar=1',
 	},
 	{
 		image: '/images/musicApp.png',
