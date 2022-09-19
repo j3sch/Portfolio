@@ -115,7 +115,7 @@ export default function NavBar(): JSX.Element {
 								</div>
 							</div>
 							<div className="absolute inset-y-0 right-0 items-center pr-2 sm:static md:inset-auto md:ml-6 sm:pr-0 md:flex hidden">
-								<Link href="https://github.com/J3ns6">
+								<Link href="https://github.com/j3sch">
 									<button
 										type="button"
 										className="bg-white p-0.5 rounded-full w-7 h-7 items-center justify-center flex focus:outline-none focus-visible:ring-2 focus:ring-offset-2 focus-visible:ring-offset-gray-800 focus-visible:ring-white"
